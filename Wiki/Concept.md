@@ -8,11 +8,11 @@ Voor het eerste gedeelte van project tech moet ik een feature voor de matching a
 
 ### Mindmap
 
-![Mindmap-Schets](Wiki\images\mindmap.jpg)
+![Mindmap-Schets](https://github.com/K3A101/Tech-matching-app/raw/main/images/mindmap.jpg)
 
 Hier is een betere versie van de mindmap.
 
-![Mindmap-Digitale-Versie](Wiki\images\hifi-mindmap.jpg)
+![Mindmap-Digitale-Versie](https://github.com/K3A101/Tech-matching-app/raw/main/images/hifi-mindmap.jpg)
 
 
 ### Idee
