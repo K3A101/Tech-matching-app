@@ -10,6 +10,10 @@ Voor het eerste gedeelte van project tech moet ik een feature voor de matching a
 
 ![Mindmap-Schets](mindmap.jpg)
 
+Hier is een betere versie van de mindmap.
+
+![Mindmap-Digitale-Versie](hifi-mindmap.jpg)
+
 
 ### Idee
 Als idee heb ik bedacht om een matching app te maken voor artiesten die opzoek zijn op inpiratie om jurken te tekenen. De gebruiker kiest wat voor soort jurken wilt hij zie met de benodigde eigenschappen. Op basis van de keuzes krijgt de gebruiker jurken afbeelding te zien. 
