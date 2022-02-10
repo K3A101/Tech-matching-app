@@ -4,4 +4,6 @@
 
 2. Wanneer ik een match heb gevonden (afbeelding van een jurk) wil ik de afbeelding opslaan in mijn account zodat ik later de afbeelding kan terugvinden. 
 
-3. Wanneer ik mijn applicatie 
+3. Wanneer ik de voorwaarde van de jurk in een formulier invult, wil ik de keuzes zichtbaar maken zodat ik weet wat ik zal verwachten in de matches.
+
+4. 
