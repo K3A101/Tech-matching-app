@@ -8,6 +8,7 @@ Voor het eerste gedeelte van project tech moet ik een feature voor de matching a
 
 ### Mindmap
 
+![Mindmap-Schets](mindmap.jpg)
 
 
 ### Idee
