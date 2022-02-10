@@ -8,11 +8,11 @@ Voor het eerste gedeelte van project tech moet ik een feature voor de matching a
 
 ### Mindmap
 
-![Mindmap-Schets](C:\Users\Keïsha Alexander\Documents\Blok-3-Profilering\Tech-matching-app\Wiki\images\mindmap.jpg)
+![Mindmap-Schets](Wiki\images\mindmap.jpg)
 
 Hier is een betere versie van de mindmap.
 
-![Mindmap-Digitale-Versie](C:\Users\Keïsha Alexander\Documents\Blok-3-Profilering\Tech-matching-app\Wiki\images\hifi-mindmap.jpg)
+![Mindmap-Digitale-Versie](Wiki\images\hifi-mindmap.jpg)
 
 
 ### Idee
