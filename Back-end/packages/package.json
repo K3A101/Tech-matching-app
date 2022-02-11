@@ -1,7 +1,5 @@
 {
-  "dependencies": {
-    "express": "^4.17.2"
-  },
+  
   "name": "matching-app",
   "version": "1.0.0",
   "main": "index.js",
@@ -12,6 +10,9 @@
   "keywords": [],
   "author": "Keïsha Alexander",
   "license": "MIT",
-  "description": "A package for a matching application"
+  "description": "A package for a matching application",
   
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
