@@ -2,7 +2,7 @@
   "dependencies": {
     "express": "^4.17.2"
   },
-  "name": "packages",
+  "name": "matching-app",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {},
@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "author": "Keïsha Alexander",
+  "license": "MIT",
+  "description": "A package for a matching application"
+  
 }
