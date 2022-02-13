@@ -9,7 +9,7 @@
   "scripts": {
   
     
-  "test": "lodash index.js"
+  "test": "nodemon server.js"
   
   },
   
