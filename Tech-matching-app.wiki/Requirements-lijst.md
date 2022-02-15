@@ -3,7 +3,6 @@
 ## Job Story
  Wanneer ik niet precies weet wat voor soort jurk ga ik tekenen, wil ik met de applicatie uit verschillende afbeeldingen kiezen wat voor soort jurk ga ik gebruiken, zodat ik ze kan toepassen in mijn eigen kunstwerk.
 
-
  ### Requirements lijst
 - gebruiker moet een account kunnen aanmaken.
 - Gebruiker moet een profiel kunnen aanmaken.
@@ -16,4 +15,8 @@
 - Gebruiker moet de afbeelding kunnen opslaan in lokale opslag.
 - Gebruiker moet keuzes filtreren.
 - Gebruiker moet matches kunnen liken. 
+- Gebruikers moeten voorwaarde in een formulier kunnen invullen, zodat ze de matches krijgt.
+
+> Gekozen feature is matches krijgen op basis van wat de gebruiker in een formulier hebt ingevuld.
+
 
