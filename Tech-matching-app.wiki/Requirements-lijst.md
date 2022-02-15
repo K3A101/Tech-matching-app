@@ -16,6 +16,7 @@
 - Gebruiker moet keuzes filtreren.
 - Gebruiker moet matches kunnen liken. 
 - Gebruikers moeten voorwaarde in een formulier kunnen invullen, zodat ze de matches krijgt.
+- Gebruiker kan gebruikers met vergelijkbare 
 
 > Gekozen feature is matches krijgen op basis van wat de gebruiker in een formulier hebt ingevuld.
 
