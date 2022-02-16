@@ -26,6 +26,33 @@
 - Javascript geoefend met freecodecamp.
 - Bedenken over progressive enhancement voor de feature. 
 
+### **Progerssive enhancement voor feature**
+
+> The word progressive in progressive enhancement means creating a design that achieves a simpler-but-still-usable experience for users of older browsers and devices with limited capabilities, while at the same time being a design that progresses the user experience up to a more-compelling, fully-featured experience for users of newer browsers and devices with richer capabilities.
+**- Mozilla MDN**
+
+Voor front-end heb ik verschillende opdrachten gemaakt, waar ik naar verschillende website ging om te kijken waar progressive enhancement werd toegepast.
+
+### Voorbeelden:
+
+#### **Youtube**
+
+
+![Youtube](https://github.com/K3A101/Tech-matching-app/raw/main/images/youtube-hover)
+
+Ik heb de voorbeeld van youtube gebruikt. Een voorbeeld van enhancement. In de homepagina van youtube kun je op de thumbnails van de videos, hoveren. De thumbanils wordt vergroot en er komt meer details erbij. Er word de property `transform: scale()` en de selector gebruikt. Wat nog gebeurt krijg je ook een gespeelde preview van de video. Zonder javascript werkt youtube prima.
+
+
+#### **DLO Brightspace**
+
+
+![Youtube](https://github.com/K3A101/Tech-matching-app/raw/main/images/dlo.png)
+
+Een andere voorbeeld die ik had gezocht is dlo. Het is een informatie bron voor de vakken. Een enhancement die er wordt gebruikt, is dat alle vakken visueel te zien zijn als thumbnails. Ik heb javascript uitgeschakeld en DLO werk helemaal niet, ik zag alleen maar een witte scherm. Dus DLO is afhankelijk van Javascript om te werken. 
+
+
+
+
 --- 
 
 ## Week 2
