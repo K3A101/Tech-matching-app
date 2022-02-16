@@ -22,5 +22,5 @@
 
 ## Meta 
 * [Feedback](https://github.com/cmda-bt/pt-course-20-21/wiki/feedback)
-* [Progress](https://github.com/cmda-bt/pt-course-20-21/wiki/progress)
+* [Proces](https://github.com/K3A101/Tech-matching-app/wiki/Proces)
 * [Resources](https://github.com/cmda-bt/pt-course-20-21/wiki/resources)
