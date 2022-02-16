@@ -19,6 +19,9 @@ Als idee heb ik bedacht om een matching app te maken voor artiesten die opzoek z
 
 > Doelgroep: Jonge zelf geleerd kunstenaars die naar inspiratie zoekt om te tekenen.
 
+### Inspiratie voor het concept
+![Inspiration-wall](../images/inspiration-wall.jpg)
+
 ### Concurrentie
 Ik ging op zoek naar bestaande digitale producten die lijkt op mij eigen concept. De vraag die mij had geholpen is, wat doet een artiest om iets te tekenen, om inspiratie op te doen voor het tekenen. Het bekende websites hiervoor zijn:
 - Pinterest
@@ -26,6 +29,6 @@ Ik ging op zoek naar bestaande digitale producten die lijkt op mij eigen concept
 - [Line of action website](https://line-of-action.com/learn-to-draw)
 - Sketchdaily
 
- 
+ > Hier is een [Miro Link](https://miro.com/app/board/uXjVOOeMBfI=/?invite_link_id=804729562952) om  de afbeeldingen beter te zien. 
 
 
