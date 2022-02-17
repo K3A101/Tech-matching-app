@@ -10,6 +10,6 @@ Voor de individuele opdracht moet ik een feauture gaan bedenken voor de matching
 Een feature die ik ga uitwerken is de **carrousel** waarmee gebruikers door de matches kan swipen of scrollen. In de feature wordt ook progressive enhancement toegepast. Bijvoorbeeld:
 - Met knoppen/toets door de carrousel klikken/drukken
 - de afeelding vergroten
-- kleurpalette kopieren
+- kleurpalette kopiëren
 - downloaden van de afbeeldding
 - details van de afbeelding weghalen.
