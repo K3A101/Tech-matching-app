@@ -1,6 +1,7 @@
 
 <h1 text-align ="center" > Fashion References Matching App</h1>
 
+
 ## Tech-matching-app
 Voor het project tech ga ik een matching applicatie maken met behulp van html, CSS en Javascript. Het project heeft twee onderdelen, individueel en groepsopdracht. In dit README ga ik over mijn individuele project uitleggen. 
 
@@ -13,6 +14,12 @@ Voor de individuele opdracht moet ik een feature gaan bedenken voor de matching 
 Een feature die ik ga uitwerken is de **carrousel** waarmee gebruikers door de matches kan swipen of scrollen. In de feature wordt ook progressive enhancement toegepast. Bijvoorbeeld:
 - Met knoppen/toets door de carrousel klikken/drukken
 - De afeelding vergroten
+<<<<<<< HEAD
 - Kleurpalette kopiëren.
 - Downloaden van de afbeeldding
 - Details van de afbeelding weghalen.
+=======
+- Kleurpalette kopiëren
+- downloaden van de afbeeldding
+- details van de afbeelding weghalen.
+>>>>>>> 595dcc6f0ff64a71e110510eb51c412ed652663e
