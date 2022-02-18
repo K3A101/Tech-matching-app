@@ -17,7 +17,3 @@ Een feature die ik ga uitwerken is de **carrousel** waarmee gebruikers door de m
 - Kleurpalette kopiëren.
 - Downloaden van de afbeeldding
 - Details van de afbeelding weghalen.
-<<<<<<< HEAD
-
-=======
->>>>>>> 61752d532c6f25dba000f4bc4a55e847fd8eed49
