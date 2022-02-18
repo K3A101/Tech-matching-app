@@ -1,5 +1,6 @@
 
 <h1 text-align ="center" > Fashion References Matching App</h1>
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
 ## Tech-matching-app
 Voor het project tech ga ik een matching applicatie maken met behulp van html, CSS en Javascript. Het project heeft twee onderdelen, individueel en groepsopdracht. In dit README ga ik over mijn individuele project uitleggen. 
