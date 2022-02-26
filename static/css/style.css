@@ -1,0 +1,67 @@
+*,
+*::after,
+*::before,
+html {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/********************/
+/* Algemene stijlen */
+/********************/
+
+:root {
+    --heading-kleur: #605AD5;
+    --heading-tekst: 'colendra', 'lato', sans-serif;
+
+    --achtergrond-kleur-1: #8FA6E9;
+    --achtergrond-kleur-2: #f2f1ff;
+    --achtergrond-kleur-3: #FFFFFF;
+
+    --links-kleur: #462A78;
+    --actief-link: #8d52f1;
+
+    --bodytekst-kleur: #414141;
+    --bodytekst: 'brandon grotesque', 'lato', sans-serif;
+    --links-tekst: #ffffff;
+
+}
+
+
+body {
+    margin: 2em auto;
+    width: 80%;
+    font-family: var(--bodytekst);
+}
+
+
+
+
+h1 {
+    font-family: var(--heading-tekst);
+    color: var(--heading-kleur);
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+h2 {
+    color: var(--heading-kleur);
+}
+
+.menu:hover,
+a:hover {
+    transform: scale(1.5);
+}
