@@ -1,13 +1,14 @@
 const express = require('express');
+const pug = require('pug');
 const app = express();
 const port = 3000;
 
 
 
 
-app.get('/', (req, res) => {
-    res.send('Hi World!')
-});
+// app.get('/', (req, res) => {
+//     res.send('Hi World!')
+// });
 
 app.get('/home', (req, res) => {
     res.send('Voor de Homepagina')
@@ -21,6 +22,22 @@ app.get('/match', (req, res) => {
     res.send('Voor de match detailpagina')
 });
 
+
+//Template engine
+app.set('views', './views');
+
+const compiledFunction = pug.compileFile('index.pug');
+
+console.log(compiledFunction({
+    name: 'Timothy'
+}));
+
+app.get('/', (req, res) => {
+    res.render('index', {
+        title: 'Hey',
+        message: 'Hello there!'
+    });
+});
 
 // Error handling
 app.use((req, res, next) => {
