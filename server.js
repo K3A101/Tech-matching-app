@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 });
 
 //serve static files
-app.use('/static', express.static('public'))
+app.use('/media', express.static('static'))
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
