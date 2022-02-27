@@ -1,0 +1,115 @@
+/**********/
+/* Header */
+/**********/
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em;
+}
+
+header img {
+    width: 2em;
+}
+
+/* Gebruikersprofiel */
+header a img {
+    margin-left: 2em;
+    border-radius: 50%;
+    width: 4em;
+}
+
+header ul {
+    position: absolute;
+    left: -20em;
+}
+
+.toon-menu {
+    position: absolute;
+    left: 0;
+}
+
+.menu {
+    transition: 0.5s;
+}
+
+
+/********/
+/* Main */
+/********/
+
+main {
+    background-color: var(--achtergrond-kleur-2);
+    padding: 1em;
+}
+
+section {
+    position: relative;
+}
+
+
+section .match-foto {
+    border-radius: 4em;
+}
+
+/**************************************/
+/* /* Wat je kan doen met de match    */
+/**************************************/
+
+section figure ul {
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translateY(-4em);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 2em;
+    background-color: var(--achtergrond-kleur-3);
+    padding: 1.5em 0.5em;
+    border-radius: 2em;
+}
+
+
+section figure ul a {
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
+section figure li {
+    align-items: center;
+}
+
+section figure ul a img {
+
+    width: 2em;
+    height: 2em;
+}
+
+
+/******************************/
+/* Beschrijving over de match */
+/******************************/
+
+article {
+    margin: 4em 0;
+
+}
+
+article ul {
+    margin: 2em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+article li,
+p {
+    color: var(--bodytekst-kleur);
+}
