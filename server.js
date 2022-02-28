@@ -5,6 +5,10 @@ const app = express(); //express kopelen aan applicatie
 const port = 3000; //port maken
 const path = require('path');
 
+//Middleware & static files
+app.use( express.static('public'))
+
+
 //load view engine/template engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -15,21 +19,28 @@ app.set('view engine', 'ejs');
 //The root route
 app.get('/', (req, res) => {
 
-    res.render('index');
+    res.render('index', {
+        titel: 'homepagina'
+    });
 });
 
+//Route voor detail pagina's van de match 
+//Voorbeeld van dynamische data
+app.get('/match', (req, res) => {
+    res.render('match-details', {
+        id: 1,
+        maker: 'Keisha',
+        naam: 'Dress 1',
+        kleur: 'rood',
+        titel: 'Jouw matches'
 
+    });
+});
 
 //Formulier pagina om voorkeuren voor jurken te invullen
 app.get('/voorkeuren', (req, res) => {
-    res.render('formulier-voorkeuren')
-});
-
-
-//voorbeeld van dynamische data
-app.get('/match/opslaan', (req, res) => {
-    res.render('save-match', {
-        title: 'Jouw opgeslagen matches'
+    res.render('formulier-voorkeuren', {
+        titel: 'Kies jouw voorkeur'
     })
 });
 
@@ -39,21 +50,13 @@ app.get('/profiel', (req, res) => {
     res.send('Voor de profielpagina')
 });
 
-//Route voor detail pagina's
-app.get('/match', (req, res) => {
-    res.send('Opgeslagen matches');
-});
 
 
 
-//een error komt als de route niet bestaat
+//een error 404 komt als de route niet bestaat
 app.use((req, res, next) => {
-    res.status(404).send('Error 404: File not found')
+    res.status(404).render('404')
 });
-
-//serve static files
-app.use('/media', express.static('static'))
-
 
 //de server wordt gestaart op port 3000
 app.listen(port, () => {
