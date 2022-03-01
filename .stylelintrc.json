@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "unit-allowed-list": [
+        
+        "px","em", "deg", "%"
+    ]
+  }
+}
