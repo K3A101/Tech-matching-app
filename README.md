@@ -13,7 +13,7 @@ Voor de individuele opdracht moet ik een feature gaan bedenken voor de matching 
 
 De gebruikers moet een formulier invullen met de voorkeuren van haar jurk. En de gebruiker krijgt verschillende resultaten te zien met afbeeldingen. De matches zijn gefilterd op basis van de gebruikers voorkeuren.
 
-Wanneer de gebruiker een match heeft gevonden en opgeslagen in hun profiel kunnen ze de **afbeeldingen aanpassen** voor het tekenen. Bijvoorbeeld kleurcodes halen uit de afbeelding en afbeelding vergroten. Verder de layout wordt omgezet als een  **carrousel** waarmee gebruikers door de matches kan swipen of scrollen.
+Wanneer de gebruiker een match heeft gevonden en opgeslagen in hun profiel kunnen ze de **afbeeldingen aanpassen** voor het tekenen. Bijvoorbeeld kleurpallette halen uit de afbeelding en afbeelding vergroten. Verder de layout wordt omgezet als een  **carrousel** waarmee gebruikers door de matches kan swipen.
 
 **Progressive enhancements:**
 - Met knoppen/toets door de carrousel klikken/drukken
