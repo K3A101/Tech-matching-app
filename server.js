@@ -6,7 +6,7 @@ const port = 3000; //port maken
 const path = require('path');
 
 //Middleware & static files
-app.use( express.static('public'))
+app.use(express.static('public'))
 
 
 //load view engine/template engine
@@ -17,9 +17,18 @@ app.set('view engine', 'ejs');
 
 // Template engine
 //The root route
+//Formulier pagina om voorkeuren voor jurken te invullen
 app.get('/', (req, res) => {
+    res.render('formulier-voorkeuren', {
+        titel: 'Kies jouw voorkeur'
+    })
+});
 
-    res.render('index', {
+
+// Hier is de start pagina van de applicatie
+app.get('/homepagina', (req, res) => {
+
+    res.render('homepagina', {
         titel: 'homepagina'
     });
 });
@@ -37,17 +46,14 @@ app.get('/match', (req, res) => {
     });
 });
 
-//Formulier pagina om voorkeuren voor jurken te invullen
-app.get('/voorkeuren', (req, res) => {
-    res.render('formulier-voorkeuren', {
-        titel: 'Kies jouw voorkeur'
-    })
-});
+
 
 
 //Route voor profielpagina's
 app.get('/profiel', (req, res) => {
-    res.send('Voor de profielpagina')
+    res.render('profiel-pagina', {
+        titel: "Gebruikerspagina"
+    })
 });
 
 
@@ -60,5 +66,5 @@ app.use((req, res, next) => {
 
 //de server wordt gestaart op port 3000
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Web server running on http://localhost:${port}`)
 });

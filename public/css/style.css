@@ -31,8 +31,12 @@ html {
 
 body {
     margin: 2em auto;
-    width: 80%;
+    width: 40%;
     font-family: var(--bodytekst);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f8e3ff;
 }
 
 
@@ -59,6 +63,12 @@ a {
 
 h2 {
     color: var(--heading-kleur);
+}
+
+main {
+    border-radius: 2em;
+    padding: 1em;
+    background-color: white;
 }
 
 .menu:hover,

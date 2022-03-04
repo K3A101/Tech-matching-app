@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %> 
+<link rel="stylesheet" href="/css/gebruiker-pagina.css">
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/homepagina"><img src="./images/terug-knop.svg" alt="Ga terug"></a></li>
+                <li><a href="#"><img src="./images/meer-opties.svg" alt="Meer opties"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <!-- Informatie over de gebruiker -->
+        <section>
+            <img src="./images/gebruikers-foto.png" alt="Gebruikersprofiel">
+
+            <div class="gebruikers-metadata">
+                <h1>Lisa Scherpboom</h1>
+                <p>Een korte beschrijving van de gebruiker.</p>
+            </div>
+
+
+
+        </section>
+
+        <!-- Tabs van de profiel pagina -->
+        <section>
+            <nav>
+                <ul>
+                    <li><a class="current-tab" href="#">Matches</a></li>
+                    <li><a href="#">Colors</a></li>
+                    <li><a href="#">People</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- Thumbnails van de afbeeldingen -->
+        <section>
+            <figure>
+                <a href="./match-detail-pagina.html"><img src="./images/dress-1.jpg" alt="Opgeslagen matches"></a>
+                <a href="./match-detail-pagina.html"><img src="./images/dress-1.jpg" alt="Opgeslagen matches"></a>
+                <a href="./match-detail-pagina.html"><img src="./images/dress-1.jpg" alt="Opgeslagen matches"></a>
+                <a href="./match-detail-pagina.html"><img src="./images/dress-1.jpg" alt="Opgeslagen matches"></a>
+                <a href="./match-detail-pagina.html"><img src="./images/dress-1.jpg" alt="Opgeslagen matches"></a>
+                <a href="./match-detail-pagina.html"><img src="./images/dress-1.jpg" alt="Opgeslagen matches"></a>
+
+            </figure>
+        </section>
+
+    </main>
+
+    <script src="./js/script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="/css/homepagina.css">
+<!-- de layout van de head tag zit in de partails map als head.ejs -->
+<%- include('./partials/head.ejs')  %>
+
+<body>
+    <!-- Partials codes -->
+    <!-- importeer de code door function include te gebruiken -->
+    <%- include('./partials/header.ejs')  %>
+
+
+    </header>
+    <main>
+        <section>
+
+            <!-- Match afbeelding -->
+            <img class="match-foto" src="./images/dress-2.png" alt="Foto van Match">
+            <!-- Bron: Adobe Xd -->
+
+            <!-- Wat je met de match kan doen -->
+            <figure>
+                <nav>
+                    <ul>
+                        <li><a href="#">Weghalen<img src="./images/gum.svg" alt="Remove Icoon"></a></li>
+                        <li><a href="#">Downloaden<img src="./images/download.svg" alt="Download Icoon"></a></li>
+                        <li><a href="#">Toevoegen<img src="./images/add.svg" alt="Add Icoon"></a></li>
+                    </ul>
+                </nav>
+            </figure>
+
+            <!-- Informatie over de match -->
+            <article>
+                <ul>
+                    <li>Maker: Gebruikersnaam</li>
+                    <li>19 - 02 - 2022</li>
+                </ul>
+
+
+                <h2>Beschrijving</h2>
+                <p>Kleine detail over de afbeelding</p>
+            </article>
+
+
+            <label for="pallette">
+                <input type="color" value="#bf1942">
+            </label>
+
+            <div class="color pallette">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+
+        </section>
+
+
+    </main>
+    <!-- Hier is een layout voor de footer -->
+    <%- include('./partials/footer.ejs')  %>
+</body>
+
+</html>

@@ -1,3 +1,9 @@
+header {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    background-color: white;
+}
+
 header ul {
     display: flex;
     flex-direction: row;
