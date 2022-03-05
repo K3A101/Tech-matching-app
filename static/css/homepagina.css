@@ -1,9 +1,6 @@
-
-
 /**********/
 /* Header */
 /**********/
-
 header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -13,9 +10,7 @@ header {
     margin: 1em;
 }
 
-header img {
-    width: 2em;
-}
+
 
 /* Gebruikersprofiel */
 header a img {
@@ -36,6 +31,7 @@ header ul {
 
 .menu {
     transition: 0.5s;
+    width: 2em;
 }
 
 
