@@ -1,12 +1,16 @@
 //init app
 const express = require('express'); //module express gebruiken
-
+const bodyParser = require('body-parser')
 const app = express(); //express kopelen aan applicatie
 const port = 3000; //port maken
 const path = require('path');
 
 //Middleware & static files
 app.use(express.static('public'))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
 
 //load view engine/template engine
@@ -19,11 +23,21 @@ app.set('view engine', 'ejs');
 //The root route
 //Formulier pagina om voorkeuren voor jurken te invullen
 app.get('/', (req, res) => {
-    res.render('formulier-voorkeuren', {
+    res.render('index', {
         titel: 'Kies jouw voorkeur'
     })
 });
 
+// Route voor de form Action: "/voorkeuren"
+// Dit is de als je method post gebruikt
+app.post('/voorkeuren', (req, res) => {
+    console.log(req.body)
+    title = "het is gelukt"
+    res.render('profiel-pagina', {
+        title
+        
+    });
+})
 
 // Hier is de start pagina van de applicatie
 app.get('/homepagina', (req, res) => {
