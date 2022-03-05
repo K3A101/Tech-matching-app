@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/css/formulier.css">
+<%- include('./partials/head.ejs')  %>
+
+<body>
+
+    <%- include('./partials/header.ejs')  %>
+
+    <h1>Welke type jurk wil je tekenen ?</h1>
+
+
+    <form action="/Voorkeuren" method="post">
+        <fieldset>
+            <legend>Jurk Kleur</legend>
+            <input type="checkbox color" value="blue" name="Jurk Kleur" id="rood">
+            <label for="rood"> Rood</label>
+            <input type="checkbox" name="Jurk Kleur" id="blauw">
+            <label for="blauw"> Blauw</label>
+            <input type="checkbox" name="Jurk Kleur" id="paars">
+            <label for="paars"> Paars</label>
+            <input type="checkbox" name="Jurk Kleur" id="geel">
+            <label for="geel"> Geel</label>
+            <input type="checkbox" name="Jurk Kleur" id="wit">
+            <label for="wit"> Wit</label>
+            <input type="checkbox" name="Jurk Kleur" id="groen">
+            <label for="groen"> Groen</label>
+            <input type="checkbox" name="Jurk Kleur" id="donkergroen">
+            <label for="donkergroen"> Donkergroen</label>
+            <input type="checkbox" name="Jurk Kleur" id="roze">
+            <label for="roze"> Roze</label>
+            <input type="checkbox" name="Jurk Kleur" id="zwart">
+            <label for="zwart"> Zwart</label>
+        </fieldset>
+        
+        <fieldset>
+           <legend>Type Jurk</legend>
+           <label for="zomerkjurk">Zomerjurk</label>
+           <input type="checkbox" name="Jurk type" id="zomerjurk">
+
+           <label for="zomerkjurk">Bruiloft Jurk</label>
+           <input type="checkbox" name="Jurk type" id="zomerjurk">
+
+           <label for="zomerkjurk">Avondjurk</label>
+           <input type="checkbox" name="Jurk type" id="zomerjurk">
+
+           <label for="zomerkjurk">Zomerjurk</label>
+           <input type="checkbox" name="Jurk type" id="zomerjurk">
+
+           <label for="zomerkjurk">Zomerjurk</label>
+           <input type="checkbox" name="Jurk type" id="zomerjurk">
+        </fieldset>
+
+
+    </form>
+
+    <%- include('./partials/footer.ejs')  %>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
