@@ -1,6 +1,8 @@
 //init app
 const express = require("express"); //module express gebruiken
 const bodyParser = require("body-parser");
+const dotenv = require("dotenv").config();
+
 const app = express(); //express kopelen aan applicatie
 const port = 3000; //port maken
 const path = require("path");
