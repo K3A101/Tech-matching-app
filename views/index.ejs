@@ -1,58 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="/css/formulier.css">
+
 <%- include('./partials/head.ejs')  %>
+<link rel="stylesheet" href="/css/formulier.css">
 
 <body>
 
     <%- include('./partials/header.ejs')  %>
 
-    <h1>Welke type jurk wil je tekenen ?</h1>
+    <main>
+        <h1>Welke type jurk wil je tekenen ?</h1>
 
 
-    <form action="/Voorkeuren" method="post">
-        <fieldset>
-            <legend>Jurk Kleur</legend>
-            <input type="checkbox color" value="blue" name="Jurk Kleur" id="rood">
-            <label for="rood"> Rood</label>
-            <input type="checkbox" name="Jurk Kleur" id="blauw">
-            <label for="blauw"> Blauw</label>
-            <input type="checkbox" name="Jurk Kleur" id="paars">
-            <label for="paars"> Paars</label>
-            <input type="checkbox" name="Jurk Kleur" id="geel">
-            <label for="geel"> Geel</label>
-            <input type="checkbox" name="Jurk Kleur" id="wit">
-            <label for="wit"> Wit</label>
-            <input type="checkbox" name="Jurk Kleur" id="groen">
-            <label for="groen"> Groen</label>
-            <input type="checkbox" name="Jurk Kleur" id="donkergroen">
-            <label for="donkergroen"> Donkergroen</label>
-            <input type="checkbox" name="Jurk Kleur" id="roze">
-            <label for="roze"> Roze</label>
-            <input type="checkbox" name="Jurk Kleur" id="zwart">
-            <label for="zwart"> Zwart</label>
-        </fieldset>
-        
-        <fieldset>
-           <legend>Type Jurk</legend>
-           <label for="zomerkjurk">Zomerjurk</label>
-           <input type="checkbox" name="Jurk type" id="zomerjurk">
+        <form action="/voorkeuren" method="post">
+            <fieldset>
+                <label for="interesse">Inspiratie naam</label>
+                <input type="text" name="nieuweInteresse" id="interesse">
+            </fieldset>
 
-           <label for="zomerkjurk">Bruiloft Jurk</label>
-           <input type="checkbox" name="Jurk type" id="zomerjurk">
+            <fieldset>
+                <legend>Jurk Kleur</legend>
+                <!-- Moet de name variabele anders zijn? -->
+                <div class="options">
+                    <input type="checkbox" name="rodejurk" id="rood">
+                    <label for="rood"> Rood</label>
+                </div>
 
-           <label for="zomerkjurk">Avondjurk</label>
-           <input type="checkbox" name="Jurk type" id="zomerjurk">
+                <div class="options">
+                    <input type="checkbox" name="blauweJurk" id="blauw">
+                    <label for="blauw"> Blauw</label>
+                </div>
 
-           <label for="zomerkjurk">Zomerjurk</label>
-           <input type="checkbox" name="Jurk type" id="zomerjurk">
+                <div class="options">
+                    <input type="checkbox" name="paarseJurk" id="paars">
+                    <label for="paars"> Paars</label>
+                </div>
 
-           <label for="zomerkjurk">Zomerjurk</label>
-           <input type="checkbox" name="Jurk type" id="zomerjurk">
-        </fieldset>
+                <div class="options">
+                    <input type="checkbox" name="geleJurk" id="geel">
+                    <label for="geel"> Geel</label>
+                </div>
+
+                <div class="options">
+                    <input type="checkbox" name="witteJurk" id="wit">
+                    <label for="wit"> Wit</label>
+                </div>
+
+                <div class="options">
+                    <input type="checkbox" name="groeneJurk" id="groen">
+                    <label for="groen"> Groen</label>
+                </div>
+
+                <div class="options">
+                    <input type="checkbox" name="donkergroeneJurk" id="donkergroen">
+                    <label for="donkergroen"> Donkergroen</label>
+                </div>
+
+                <div class="options">
+                    <input type="checkbox" name="rozeJurk" id="roze">
+                    <label for="roze"> Roze</label>
+                </div>
+
+                <div class="options">
+
+                    <input type="checkbox" name="zwarteJurk" id="zwart">
+                    <label for="zwart"> Zwart</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Type Jurk</legend>
+                <div class="options">
+                    <input type="checkbox" name="zomerkjurk" id="zomerjurk">
+                    <label for="zomerkjurk">Zomerjurk</label>
+
+                </div>
 
 
-    </form>
+                <div class="options">
+                    <input type="checkbox" name="bruiloft-jurk" id="bruiloftJurk">
+                    <label for="bruiloft-jurk">Bruiloft Jurk</label>
+
+
+                </div>
+
+                <div class="options">
+                    <input type="checkbox" name="avondjurk" id="avondjurk">
+                    <label for="avondjurk">Avondjurk</label>
+
+
+                </div>
+
+                <div class="options">
+                    <input type="checkbox" name="baljurk" id="baljurk">
+                    <label for="baljurk">Baljurken</label>
+
+
+                </div>
+
+                <div class="options">
+                    <input type="checkbox" name="lange-jurk" id="langeJurk">
+                    <label for="lange-jurk">Lange Jurken</label>
+
+                </div>
+
+            </fieldset>
+
+            <button type="submit">Gebruik voorkeur</button>
+        </form>
+
+    </main>
 
     <%- include('./partials/footer.ejs')  %>
     <script src="./js/script.js"></script>
