@@ -10,59 +10,345 @@
     <!-- importeer de code door function include te gebruiken -->
     <%- include('./partials/header.ejs')  %>
 
+    <!-- Filter op basis van kleur -->
+    <form action="/kleur-filter" method="get">
+        <label for="filter">Filtreren met kleur</label>
+        <input type="text" name="kleur-filter" id="filter" placeholder="Bij welke kleur wil je filtreren..?">
 
-    </header>
+    </form>
+
     <main>
+
+
+
+
+        <!-- Hier is een thumbnail van alle afbeeldingen 1-->
         <section>
+            <img src="/images/dress-2.png" alt="Jurk Afbeelding">
 
-            <!-- Match afbeelding -->
-            <img class="match-foto" src="./images/dress-2.png" alt="Foto van Match">
-            <!-- Bron: Adobe Xd -->
-
-            <!-- Wat je met de match kan doen -->
             <figure>
                 <nav>
                     <ul>
-                        <li><a href="#">Weghalen<img src="./images/gum.svg" alt="Remove Icoon"></a></li>
-                        <li><a href="#">Downloaden<img src="./images/download.svg" alt="Download Icoon"></a></li>
-                        <li><a href="#">Toevoegen<img src="./images/add.svg" alt="Add Icoon"></a></li>
+                        <li><a href="#"><img src="./images/gum.svg" alt="Remove Icoon">Weghalen</a></li>
+                        <li><a href="#"><img src="./images/download.svg" alt="Download Icoon">Downloaden</a></li>
+                        <li><a href="#"><img src="./images/add.svg" alt="Add Icoon">Toevoegen</a></li>
                     </ul>
                 </nav>
             </figure>
 
             <!-- Informatie over de match -->
+            <% matches.forEach(function(match){ %>
             <article>
                 <ul>
-                    <li>Maker: Gebruikersnaam</li>
-                    <li>19 - 02 - 2022</li>
+                    <li> <%=match.gebruikersnaam %> </li>
+                    <li><%= match.publicatiedatum %> </li>
                 </ul>
 
 
                 <h2>Beschrijving</h2>
-                <p>Kleine detail over de afbeelding</p>
+                <p><%= match.beschrijving %> </p>
+
+
             </article>
+            <% }) %>
+        </section>
+
+        <section>
+            <img src="/images/dress-2.png" alt="Jurk Afbeelding">
+
+            <figure>
+                <nav>
+                    <ul>
+                        <li><a href="#"><img src="./images/gum.svg" alt="Remove Icoon">Weghalen</a></li>
+                        <li><a href="#"><img src="./images/download.svg" alt="Download Icoon">Downloaden</a></li>
+                        <li><a href="#"><img src="./images/add.svg" alt="Add Icoon">Toevoegen</a></li>
+                    </ul>
+                </nav>
+            </figure>
+
+            <!-- Informatie over de match -->
+            <% matches.forEach(function(match){ %>
+            <article>
+                <ul>
+                    <li> <%=match.gebruikersnaam %> </li>
+                    <li><%= match.publicatiedatum %> </li>
+                </ul>
 
 
-            <label for="pallette">
-                <input type="color" value="#bf1942">
-            </label>
-
-            <div class="color pallette">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+                <h2>Beschrijving</h2>
+                <p><%= match.beschrijving %> </p>
 
 
+            </article>
+            <% }) %>
+        </section>
+        <section>
+            <img src="/images/dress-2.png" alt="Jurk Afbeelding">
+
+            <figure>
+                <nav>
+                    <ul>
+                        <li><a href="#"><img src="./images/gum.svg" alt="Remove Icoon">Weghalen</a></li>
+                        <li><a href="#"><img src="./images/download.svg" alt="Download Icoon">Downloaden</a></li>
+                        <li><a href="#"><img src="./images/add.svg" alt="Add Icoon">Toevoegen</a></li>
+                    </ul>
+                </nav>
+            </figure>
+
+            <!-- Informatie over de match -->
+            <% matches.forEach(function(match){ %>
+            <article>
+                <ul>
+                    <li> <%=match.gebruikersnaam %> </li>
+                    <li><%= match.publicatiedatum %> </li>
+                </ul>
+
+
+                <h2>Beschrijving</h2>
+                <p><%= match.beschrijving %> </p>
+
+
+            </article>
+            <% }) %>
+        </section>
+        <section>
+            <img src="/images/dress-2.png" alt="Jurk Afbeelding">
+
+            <figure>
+                <nav>
+                    <ul>
+                        <li><a href="#"><img src="./images/gum.svg" alt="Remove Icoon">Weghalen</a></li>
+                        <li><a href="#"><img src="./images/download.svg" alt="Download Icoon">Downloaden</a></li>
+                        <li><a href="#"><img src="./images/add.svg" alt="Add Icoon">Toevoegen</a></li>
+                    </ul>
+                </nav>
+            </figure>
+
+            <!-- Informatie over de match -->
+            <% matches.forEach(function(match){ %>
+            <article>
+                <ul>
+                    <li> <%=match.gebruikersnaam %> </li>
+                    <li><%= match.publicatiedatum %> </li>
+                </ul>
+
+
+                <h2>Beschrijving</h2>
+                <p><%= match.beschrijving %> </p>
+
+
+            </article>
+            <% }) %>
+        </section>
+        <section>
+            <img src="/images/dress-2.png" alt="Jurk Afbeelding">
+
+            <figure>
+                <nav>
+                    <ul>
+                        <li><a href="#"><img src="./images/gum.svg" alt="Remove Icoon">Weghalen</a></li>
+                        <li><a href="#"><img src="./images/download.svg" alt="Download Icoon">Downloaden</a></li>
+                        <li><a href="#"><img src="./images/add.svg" alt="Add Icoon">Toevoegen</a></li>
+                    </ul>
+                </nav>
+            </figure>
+
+            <!-- Informatie over de match -->
+            <% matches.forEach(function(match){ %>
+            <article>
+                <ul>
+                    <li> <%=match.gebruikersnaam %> </li>
+                    <li><%= match.publicatiedatum %> </li>
+                </ul>
+
+
+                <h2>Beschrijving</h2>
+                <p><%= match.beschrijving %> </p>
+
+
+            </article>
+            <% }) %>
+        </section>
+        <section>
+            <img src="/images/dress-2.png" alt="Jurk Afbeelding">
+
+            <figure>
+                <nav>
+                    <ul>
+                        <li><a href="#"><img src="./images/gum.svg" alt="Remove Icoon">Weghalen</a></li>
+                        <li><a href="#"><img src="./images/download.svg" alt="Download Icoon">Downloaden</a></li>
+                        <li><a href="#"><img src="./images/add.svg" alt="Add Icoon">Toevoegen</a></li>
+                    </ul>
+                </nav>
+            </figure>
+
+            <!-- Informatie over de match -->
+            <% matches.forEach(function(match){ %>
+            <article>
+                <ul>
+                    <li> <%=match.gebruikersnaam %> </li>
+                    <li><%= match.publicatiedatum %> </li>
+                </ul>
+
+
+                <h2>Beschrijving</h2>
+                <p><%= match.beschrijving %> </p>
+
+
+            </article>
+            <% }) %>
+        </section>
+        <section>
+            <img src="/images/dress-2.png" alt="Jurk Afbeelding">
+
+            <figure>
+                <nav>
+                    <ul>
+                        <li><a href="#"><img src="./images/gum.svg" alt="Remove Icoon">Weghalen</a></li>
+                        <li><a href="#"><img src="./images/download.svg" alt="Download Icoon">Downloaden</a></li>
+                        <li><a href="#"><img src="./images/add.svg" alt="Add Icoon">Toevoegen</a></li>
+                    </ul>
+                </nav>
+            </figure>
+
+            <!-- Informatie over de match -->
+            <% matches.forEach(function(match){ %>
+            <article>
+                <ul>
+                    <li> <%=match.gebruikersnaam %> </li>
+                    <li><%= match.publicatiedatum %> </li>
+                </ul>
+
+
+                <h2>Beschrijving</h2>
+                <p><%= match.beschrijving %> </p>
+
+
+            </article>
+            <% }) %>
+        </section>
+        <section>
+            <img src="/images/dress-2.png" alt="Jurk Afbeelding">
+
+            <figure>
+                <nav>
+                    <ul>
+                        <li><a href="#"><img src="./images/gum.svg" alt="Remove Icoon">Weghalen</a></li>
+                        <li><a href="#"><img src="./images/download.svg" alt="Download Icoon">Downloaden</a></li>
+                        <li><a href="#"><img src="./images/add.svg" alt="Add Icoon">Toevoegen</a></li>
+                    </ul>
+                </nav>
+            </figure>
+
+            <!-- Informatie over de match -->
+            <% matches.forEach(function(match){ %>
+            <article>
+                <ul>
+                    <li> <%=match.gebruikersnaam %> </li>
+                    <li><%= match.publicatiedatum %> </li>
+                </ul>
+
+
+                <h2>Beschrijving</h2>
+                <p><%= match.beschrijving %> </p>
+
+
+            </article>
+            <% }) %>
+        </section>
+        <section>
+            <img src="/images/dress-2.png" alt="Jurk Afbeelding">
+
+            <figure>
+                <nav>
+                    <ul>
+                        <li><a href="#"><img src="./images/gum.svg" alt="Remove Icoon">Weghalen</a></li>
+                        <li><a href="#"><img src="./images/download.svg" alt="Download Icoon">Downloaden</a></li>
+                        <li><a href="#"><img src="./images/add.svg" alt="Add Icoon">Toevoegen</a></li>
+                    </ul>
+                </nav>
+            </figure>
+
+            <!-- Informatie over de match -->
+            <% matches.forEach(function(match){ %>
+            <article>
+                <ul>
+                    <li> <%=match.gebruikersnaam %> </li>
+                    <li><%= match.publicatiedatum %> </li>
+                </ul>
+
+
+                <h2>Beschrijving</h2>
+                <p><%= match.beschrijving %> </p>
+
+
+            </article>
+            <% }) %>
+        </section>
+        <section>
+            <img src="/images/dress-2.png" alt="Jurk Afbeelding">
+
+            <figure>
+                <nav>
+                    <ul>
+                        <li><a href="#"><img src="./images/gum.svg" alt="Remove Icoon">Weghalen</a></li>
+                        <li><a href="#"><img src="./images/download.svg" alt="Download Icoon">Downloaden</a></li>
+                        <li><a href="#"><img src="./images/add.svg" alt="Add Icoon">Toevoegen</a></li>
+                    </ul>
+                </nav>
+            </figure>
+
+            <!-- Informatie over de match -->
+            <% matches.forEach(function(match){ %>
+            <article>
+                <ul>
+                    <li> <%=match.gebruikersnaam %> </li>
+                    <li><%= match.publicatiedatum %> </li>
+                </ul>
+
+
+                <h2>Beschrijving</h2>
+                <p><%= match.beschrijving %> </p>
+
+
+            </article>
+            <% }) %>
+        </section>
+        <section>
+            <img src="/images/dress-2.png" alt="Jurk Afbeelding">
+
+            <figure>
+                <nav>
+                    <ul>
+                        <li><a href="#"><img src="./images/gum.svg" alt="Remove Icoon">Weghalen</a></li>
+                        <li><a href="#"><img src="./images/download.svg" alt="Download Icoon">Downloaden</a></li>
+                        <li><a href="#"><img src="./images/add.svg" alt="Add Icoon">Toevoegen</a></li>
+                    </ul>
+                </nav>
+            </figure>
+
+            <!-- Informatie over de match -->
+            <% matches.forEach(function(match){ %>
+            <article>
+                <ul>
+                    <li> <%=match.gebruikersnaam %> </li>
+                    <li><%= match.publicatiedatum %> </li>
+                </ul>
+
+
+                <h2>Beschrijving</h2>
+                <p><%= match.beschrijving %> </p>
+
+
+            </article>
+            <% }) %>
         </section>
 
 
     </main>
     <!-- Hier is een layout voor de footer -->
     <%- include('./partials/footer.ejs')  %>
-     <script src="./js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
