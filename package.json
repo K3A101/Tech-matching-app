@@ -65,6 +65,9 @@
   "match-sorter": "^6.3.1",
   
     
+  "mongodb": "^4.4.1",
+  
+    
   "v-tooltip": "^2.1.3"
   
   },
