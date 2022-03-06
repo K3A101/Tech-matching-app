@@ -3,3 +3,4 @@ documentatie/
 Front-end/
 .vscode/
 static/
+.env/
