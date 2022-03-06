@@ -9,8 +9,8 @@
   "scripts": {
   
     
-  "start": "nodemon server.js"
-  
+  "start": "nodemon server.js",
+  "lint": "npx eslint *js"
   },
   
   "keywords": [
@@ -70,6 +70,9 @@
   
     
   "eslint": "^8.10.0",
+  
+    
+  "eslint-config-p5js": "^1.1.0",
   
     
   "eslint-config-standard": "^16.0.3",
