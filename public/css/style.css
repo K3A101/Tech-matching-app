@@ -28,12 +28,12 @@
 
 body {
     margin: 2em auto;
-    width: 40%;
+    width: 80%;
     font-family: var(--bodytekst);
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: #f8e3ff;
+    background-color: #dbd5ff;
 }
 
 /************************/
@@ -70,10 +70,10 @@ h2 {
 main {
     border-radius: 2em;
     padding: 1em;
-    background-color: white;
+    /* background-color: white; */
 }
 
 .menu:hover,
 a:hover {
-    transform: scale(1.5);
+    transform: scale(1.3);
 }

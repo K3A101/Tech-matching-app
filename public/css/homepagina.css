@@ -1,3 +1,8 @@
+body {
+    margin: 2em auto;
+    width: 100%;
+}
+
 /**********/
 /* Header */
 /**********/
@@ -15,28 +20,40 @@ header img {
     width: 2em;
 }
 
+header>a:last-of-type {
+    display: flex;
+    justify-content: flex-end;
+}
+
 /* Gebruikersprofiel */
 header a img {
-    margin-left: 5em;
+    transform: scale(1.1);
     border-radius: 50%;
     width: 4em;
 }
 
 header ul {
+    z-index: 1;
+    font-size: 2em;
     display: flex;
     flex-direction: column;
     background-color: white;
     position: absolute;
     left: -20em;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1)
 }
 
 .toon-menu {
     padding: 2em;
+    animation-name: side-menu;
+    animation-duration: 1s;
+    animation-timing-function: all ease-in-out;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 
     position: absolute;
-    top: 0;
+    top: 10em;
 
-    left: 0;
+    left: -1em;
 
 }
 
@@ -44,23 +61,77 @@ header ul {
     transition: 0.5s;
 }
 
+@keyframes side-menu {
+    from {
+        transform: translateX(-9em);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/**********/
+/* Filter */
+/**********/
+
+body form {
+    padding: 2em;
+}
+
+form label {
+    font-size: 2em;
+    font-weight: bold;
+
+}
+
+form input {
+    margin-left: 1em;
+    padding: 1em;
+    width: 50%;
+    border: none;
+    border-radius: 2em;
+}
 
 /********/
 /* Main */
 /********/
 
 main {
-    background-color: var(--achtergrond-kleur-2);
+
     padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: none;
+    gap: 2.5em;
 }
 
 section {
     position: relative;
+    background-color: white;
+    padding: 1em;
+    border-radius: 2em;
+    transition: ease-in-out 0.5s;
+    /* box shadow */
+    /* Bron:  https://shadows.brumm.af/*/
+    box-shadow: 0.4px 0.3px 0.6px rgba(0, 0, 0, -0.002),
+        1px 0.8px 1.5px rgba(0, 0, 0, 0.004),
+        1.9px 1.5px 2.9px rgba(0, 0, 0, 0.013),
+        3.4px 2.7px 5.1px rgba(0, 0, 0, 0.025),
+        6.3px 5px 9.6px rgba(0, 0, 0, 0.042),
+        15px 12px 23px rgba(0, 0, 0, 0.07);
+
+
+}
+
+section:hover {
+    transform: scale(0.9);
 }
 
 
-section .match-foto {
-    border-radius: 4em;
+section img[alt="Jurk Afbeelding"] {
+    border-radius: 2em;
 }
 
 /**************************************/
@@ -75,18 +146,19 @@ section figure ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
-    gap: 2em;
+    gap: 1em;
     background-color: var(--achtergrond-kleur-3);
     padding: 1.5em 0.5em;
     border-radius: 2em;
 }
 
-
+/* Download, remove and add button */
 section figure ul a {
     align-items: center;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
+    color: var(--links-kleur);
 }
 
 section figure li {
@@ -103,7 +175,6 @@ section figure ul a img {
 /******************************/
 /* Beschrijving over de match */
 /******************************/
-
 article {
     margin: 4em 0;
 
