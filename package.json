@@ -1,6 +1,6 @@
 {
   
-  "name": "matching-app",
+  "name": "dress-matching-app",
   
   "version": "1.0.0",
   
@@ -10,6 +10,8 @@
   
     
   "start": "nodemon server.js",
+
+  "deploy": "node server.js",
   
     
   "lint": "npx eslint *js"
