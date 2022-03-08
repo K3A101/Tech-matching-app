@@ -21,7 +21,7 @@
 
 
 
- <% matches.forEach(function(match){ %>
+        <% matches.forEach(function(match){ %>
         <!-- Hier is een thumbnail van alle afbeeldingen 1-->
         <section>
             <img src="/images/<%= match.url %>" alt="Jurk Afbeelding">
@@ -37,7 +37,7 @@
             </figure>
 
             <!-- Informatie over de match -->
-           
+
             <article>
                 <ul>
                     <li> <%=match.gebruikersnaam %> </li>
@@ -50,6 +50,7 @@
 
 
             </article>
-         
+
         </section>
-   <% }) %>
+        <% }) %>
+        <script src="./js/script.js"></script>
