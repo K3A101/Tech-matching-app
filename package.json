@@ -1,112 +1,51 @@
 {
   
   "name": "dress-matching-app",
-  
-  "version": "1.0.0",
-  
-  "main": "server.js",
+    "version": "1.0.0",
+    "main": "server.js",
   
   "scripts": {
-  
-    
+      
   "start": "nodemon server.js",
-
-  "deploy": "node server.js",
-  
-    
-  "lint": "npx eslint *js"
-  
+  "deploy": "node server.js",  
+  "lint": "npx eslint *js" 
   },
-  
-  "keywords": [
-  
-    
-  "matching",
-  
-    
+  "keywords": [ 
+  "matching", 
   "drawing reference",
-  
-    
   "fashion design"
-  
   ],
   
   "author": "Keïsha Alexander",
-  
   "license": "MIT",
-  
   "description": "A package for a matching application",
   
-  "dependencies": {
-  
-    
+  "dependencies": { 
   "body-parser": "^1.19.2",
-  
-    
   "camelcase": "^6.3.0",
-  
-    
   "clipboard": "^2.0.10",
-  
-    
-  "dotenv": "^16.0.0",
-  
-    
-  "ejs": "^3.1.6",
-  
-    
-  "express": "^4.17.2",
-  
-    
-  "js-file-downloader": "^1.1.24",
-  
-    
-  "lodash": "^4.17.21",
-  
-    
-  "match-sorter": "^6.3.1",
-  
-    
-  "mongodb": "^4.4.1",
-  
-    
+  "dotenv": "^16.0.0",    
+  "ejs": "^3.1.6",    
+  "express": "^4.17.2",  
+  "js-file-downloader": "^1.1.24",    
+  "lodash": "^4.17.21", 
+  "match-sorter": "^6.3.1",  
+  "mongodb": "^4.4.1", 
   "v-tooltip": "^2.1.3"
-  
   },
   
   "devDependencies": {
   
-    
   "eslint": "^8.10.0",
-  
-    
-  "eslint-config-p5js": "^1.1.0",
-  
-    
+  "eslint-config-p5js": "^1.1.0", 
   "eslint-config-standard": "^16.0.3",
-  
-    
   "eslint-plugin-import": "^2.25.4",
-  
-    
   "eslint-plugin-node": "^11.1.0",
-  
-    
-  "eslint-plugin-promise": "^5.2.0",
-  
-    
-  "install": "^0.13.0",
-  
-    
-  "npm": "^8.5.2",
-  
-    
-  "prettier": "2.5.1",
-  
-    
-  "stylelint": "^14.5.3",
-  
-    
+  "eslint-plugin-promise": "^5.2.0",  
+  "install": "^0.13.0", 
+  "npm": "^8.5.2", 
+  "prettier": "2.5.1",  
+  "stylelint": "^14.5.3",   
   "stylelint-config-standard": "^25.0.0"
   
   }
