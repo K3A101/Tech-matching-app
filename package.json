@@ -6,8 +6,8 @@
   
   "scripts": {
       
-  "start": "nodemon server.js",
-  "deploy": "node server.js",  
+  "start": "node server.js",
+  "deploy": "nodemon server.js",  
   "lint": "npx eslint *js" 
   },
   "keywords": [ 
