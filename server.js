@@ -78,20 +78,20 @@ app.post("/voorkeuren/:matchId", (req, res) => {
 app.get("/homepagina", async (req, res) => {
 
     //EEN SPECIFIEK EIENSCHAP VINDEN
-    const query = {
-        "url": "dress-1.jpg"
-    };
+    // const query = {
+    //     "url": "dress-1.jpg"
+    // };
 
     // Sorteren
-    const options = {
-        sort: {
-            publicatiedatum: -1
-        }
-    }
+    // const options = {
+    //     sort: {
+    //         publicatiedatum: -1
+    //     }
+    // }
 
     //GET LIST OF ALL DRESSES images
     const matches = await db.collection("jurken").find({
-        query
+
     }).toArray();
 
     res.render("homepagina", {
