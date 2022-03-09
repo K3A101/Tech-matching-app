@@ -13,7 +13,7 @@ const {
 
 //variabels
 const app = express(); //express kopelen aan applicatie
-const port = 3000; //port maken
+const port = process.env.PORT || 3000; //port maken
 const path = require("path");
 let db = null;
 
@@ -90,7 +90,9 @@ app.get("/homepagina", async (req, res) => {
     }
 
     //GET LIST OF ALL DRESSES images
-    const matches = await db.collection("jurken").find({query}).toArray();
+    const matches = await db.collection("jurken").find({
+        query
+    }).toArray();
 
     res.render("homepagina", {
         titel: "homepagina",
