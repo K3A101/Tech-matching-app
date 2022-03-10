@@ -86,13 +86,21 @@ form label {
 
 }
 
-form input {
+form input[type ="text"] {
     margin-left: 1em;
     padding: 1em;
     width: 50%;
     border: none;
     border-radius: 2em;
 }
+
+section label {
+    font-size: 1.5em;
+}
+
+/* section input[value="#e66465"] {
+    padding: 2em;
+} */
 
 /********/
 /* Main */
