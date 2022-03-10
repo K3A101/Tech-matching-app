@@ -43,23 +43,61 @@ app.set("view engine", "ejs");
 //The root route
 //Formulier pagina om voorkeuren voor jurken te invullen
 app.get("/", async (req, res) => {
-console.log(req.body)
-  const query = {"kleur":"rood"}
-
-    const matches = await db.collection("jurken").find({query}).toArray();
+    console.log(req.body)
+    const dresses = [{
+        kleur: req.query.rodejurk,
+        kleur: req.query.blauwJurk,
+        kleur: req.query.geleJurk,
+        kleur: req.query.rodejurk,
+        kleur: req.query.rodejurk,
+        kleur: req.query.rodejurk,
+        kleur: req.query.rodejurk,
+        kleur: req.query.rodejurk,
+        kleur: req.query.rodejurk
+    }]
+    const matches = await db.collection("jurken").insertOne({
+        dresses
+    });
     res.render("index", {
         titel: "Kies jouw voorkeur",
         matches
     });
 });
 
-// Route voor de form Action: "/voorkeuren"
+// Route voor de form Action: "/homepagina"
 // Dit is de als je method post gebruikt
-app.post("/voorkeuren", (req, res) => {
+app.post("/homepagina", async (req, res) => {
     console.log(req.body);
 
+
+    console.log('hieronder is de object keys loop')
+    Object.keys(req.body).forEach(key => {
+        console.log(key)
+    })
+
+    const dresses = [{
+        kleur: req.query.rodejurk,
+        kleur: req.query.blauwJurk,
+        kleur: req.query.geleJurk,
+        kleur: req.query.rodejurk,
+        kleur: req.query.rodejurk,
+        kleur: req.query.rodejurk,
+        kleur: req.query.rodejurk,
+        kleur: req.query.rodejurk,
+        kleur: req.query.rodejurk
+    }]
+
+    //GET LIST OF ALL DRESSES images
+    const matches = await db.collection("jurken").find({
+
+    }).toArray();
+
+    console.log('hieronder matches')
+    console.log(matches)
+
     res.render("homepagina", {
-        titel: "Jouw voorkeuren"
+        titel: "Jouw voorkeuren",
+        matches: []
     });
 
 });
@@ -71,7 +109,7 @@ app.post("/voorkeuren/:matchId", (req, res) => {
     const id = "req.body.id"
     console.log("Get matches from DB")
 
-    
+
     res.render("homepagina", {
         titel: "Jouw voorkeuren",
 
@@ -81,7 +119,7 @@ app.post("/voorkeuren/:matchId", (req, res) => {
 
 
 // Hier is de start pagina van de applicatie
-app.post("/homepagina", async (req, res) => {
+app.get("/homepagina", async (req, res) => {
     console.log(req.body);
     //EEN SPECIFIEK EIENSCHAP VINDEN
     // const query = {
@@ -120,9 +158,9 @@ app.get("/profiel", (req, res) => {
 });
 
 //een error 404 komt als de route niet bestaat
-app.use((req, res, next) => {
-    res.status(404).render("404");
-});
+// app.use((req, res, next) => {
+//     res.status(404).render("404");
+// });
 
 
 /*****************************************************
@@ -138,10 +176,10 @@ async function connectDB() {
         await client.connect();
         db = client.db(process.env.DB_NAME);
     } catch (error) {
-        throw error;
+
+
     }
 }
-
 //de server wordt gestaart op port 3000
 app.listen(port, () => {
     console.log(`Web server running on http://localhost:${port}`);
