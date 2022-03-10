@@ -2,7 +2,7 @@
 const express = require("express"); //module express gebruiken
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv").config();
-
+const arrayify = require('array-back');
 // Mongodb database in app verbinden.
 const {
     MongoClient
@@ -15,6 +15,8 @@ const {
 const app = express(); //express kopelen aan applicatie
 const port = process.env.PORT || 3000; //port maken
 const path = require("path");
+const kleuren = ["rood", "blauw", "geel", "paars", "wit", "groen", "donkergroen", "roze", "zwart"];
+const typeJurk = ["zomerjurk", "bruiloft-jurk", "avondjurk", "baljurk", "langejurk"];
 let db = null;
 
 
@@ -40,10 +42,14 @@ app.set("view engine", "ejs");
 // TEMPLATE ENGINE
 //The root route
 //Formulier pagina om voorkeuren voor jurken te invullen
-app.get("/", (req, res) => {
-    res.render("index", {
-        titel: "Kies jouw voorkeur"
+app.get("/", async (req, res) => {
+console.log(req.body)
+  const query = {"kleur":"rood"}
 
+    const matches = await db.collection("jurken").find({query}).toArray();
+    res.render("index", {
+        titel: "Kies jouw voorkeur",
+        matches
     });
 });
 
@@ -65,22 +71,22 @@ app.post("/voorkeuren/:matchId", (req, res) => {
     const id = "req.body.id"
     console.log("Get matches from DB")
 
-    const match = {};
+    
     res.render("homepagina", {
         titel: "Jouw voorkeuren",
-        match
+
     });
 
 });
 
 
 // Hier is de start pagina van de applicatie
-app.get("/homepagina", async (req, res) => {
-
+app.post("/homepagina", async (req, res) => {
+    console.log(req.body);
     //EEN SPECIFIEK EIENSCHAP VINDEN
     // const query = {
-    //     "url": "dress-1.jpg"
-    // };
+    //     "kleur": "rood"
+    // }
 
     // Sorteren
     // const options = {
@@ -103,14 +109,7 @@ app.get("/homepagina", async (req, res) => {
 //Route voor detail pagina's van de match 
 //Voorbeeld van dynamische data
 app.get("/match", (req, res) => {
-    res.render("match-details", {
-        id: 1,
-        maker: "Keisha",
-        naam: "Dress 1",
-        kleur: "rood",
-        titel: "Jouw matches"
-
-    });
+    res.render("match-details", {});
 });
 
 //Route voor profielpagina's
