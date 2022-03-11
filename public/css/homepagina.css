@@ -115,6 +115,10 @@ main {
     gap: 2.5em;
 }
 
+main h2 {
+    font-family: var(--heading-tekst);
+}
+
 section {
     position: relative;
     background-color: white;
