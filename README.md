@@ -37,7 +37,7 @@ npm run deploy
  Ik heb de npm package nodemon gebruikt om de server makkelijk te herstarten. Het package wordt geinstalleerd 
  `npm install --save-dev nodemon`
 
- De server wordt geopend op [http://localhost:3000/](http://localhost:3000/).
+ 
 
 
  ---
