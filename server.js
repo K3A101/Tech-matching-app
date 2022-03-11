@@ -13,7 +13,7 @@ const {
 
 //variabels
 const app = express(); //express kopelen aan applicatie
-const port = process.env.PORT || 3000; //port maken
+const port = process.env.PORT || 8000; //port maken
 const path = require("path");
 const kleuren = ["rood", "blauw", "geel", "paars", "wit", "groen", "donkergroen", "roze", "zwart"];
 const typeJurk = ["zomerjurk", "bruiloft-jurk", "avondjurk", "baljurk", "langejurk"];
@@ -43,24 +43,22 @@ app.set("view engine", "ejs");
 //The root route
 //Formulier pagina om voorkeuren voor jurken te invullen
 app.get("/", async (req, res) => {
-    console.log(req.body)
-    const dresses = [{
-        kleur: req.query.rodejurk,
-        kleur: req.query.blauwJurk,
-        kleur: req.query.geleJurk,
-        kleur: req.query.rodejurk,
-        kleur: req.query.rodejurk,
-        kleur: req.query.rodejurk,
-        kleur: req.query.rodejurk,
-        kleur: req.query.rodejurk,
-        kleur: req.query.rodejurk
-    }]
+    console.log(req.query)
+    const dresses = {
+        kleur: req.query.kleur,
+        type: req.query.type
+    };
+
     const matches = await db.collection("jurken").insertOne({
         dresses
     });
+    // const matches = await db.collection("jurken").find({}).toArray();
     res.render("index", {
         titel: "Kies jouw voorkeur",
         matches
+    //     resultaten: ["kleur: req.query.kleur",
+    //         "type: req.query.type"
+    //     ]
     });
 });
 
@@ -73,31 +71,34 @@ app.post("/homepagina", async (req, res) => {
     console.log('hieronder is de object keys loop')
     Object.keys(req.body).forEach(key => {
         console.log(key)
+
     })
 
-    const dresses = [{
-        kleur: req.query.rodejurk,
-        kleur: req.query.blauwJurk,
-        kleur: req.query.geleJurk,
-        kleur: req.query.rodejurk,
-        kleur: req.query.rodejurk,
-        kleur: req.query.rodejurk,
-        kleur: req.query.rodejurk,
-        kleur: req.query.rodejurk,
-        kleur: req.query.rodejurk
-    }]
 
     //GET LIST OF ALL DRESSES images
-    const matches = await db.collection("jurken").find({
 
-    }).toArray();
+    //const matches = await db.collection("jurken").find({  dresses}).toArray();
 
     console.log('hieronder matches')
+    // Hoe maak ik het zichtbaar in de browser
+    const dresses = {
+        kleur: req.body.kleur,
+        type: req.body.type
+    };
+
+    const matches = await db.collection("jurken").find({
+        dresses
+    }).toArray();
     console.log(matches)
+
+
 
     res.render("homepagina", {
         titel: "Jouw voorkeuren",
-        matches: []
+        matches
+        // resultaten: ["kleur: req.body.kleur",
+        //     "type: req.body.type"
+        // ]
     });
 
 });
@@ -120,11 +121,11 @@ app.post("/voorkeuren/:matchId", (req, res) => {
 
 // Hier is de start pagina van de applicatie
 app.get("/homepagina", async (req, res) => {
-    console.log(req.body);
+    console.log(req.query);
     //EEN SPECIFIEK EIENSCHAP VINDEN
-    // const query = {
-    //     "kleur": "rood"
-    // }
+    const query = {
+        "kleur": "rood"
+    }
 
     // Sorteren
     // const options = {
@@ -135,7 +136,7 @@ app.get("/homepagina", async (req, res) => {
 
     //GET LIST OF ALL DRESSES images
     const matches = await db.collection("jurken").find({
-
+        query
     }).toArray();
 
     res.render("homepagina", {
@@ -157,10 +158,6 @@ app.get("/profiel", (req, res) => {
     });
 });
 
-//een error 404 komt als de route niet bestaat
-// app.use((req, res, next) => {
-//     res.status(404).render("404");
-// });
 
 
 /*****************************************************
@@ -177,9 +174,16 @@ async function connectDB() {
         db = client.db(process.env.DB_NAME);
     } catch (error) {
 
+        throw (error)
 
     }
 }
+
+//een error 404 komt als de route niet bestaat
+app.use((req, res, next) => {
+    res.status(404).render("404");
+});
+
 //de server wordt gestaart op port 3000
 app.listen(port, () => {
     console.log(`Web server running on http://localhost:${port}`);
