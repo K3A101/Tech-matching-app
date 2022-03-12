@@ -15,6 +15,9 @@ const {
 const app = express(); //express kopelen aan applicatie
 const port = process.env.PORT || 8000; //port maken
 const path = require("path");
+const {
+    body
+} = require("express-validator");
 const kleuren = ["rood", "blauw", "geel", "paars", "wit", "groen", "donkergroen", "roze", "zwart"];
 const typeJurk = ["zomerjurk", "bruiloft-jurk", "avondjurk", "baljurk", "langejurk"];
 let db = null;
@@ -43,22 +46,28 @@ app.set("view engine", "ejs");
 //The root route
 //Formulier pagina om voorkeuren voor jurken te invullen
 app.get("/", async (req, res) => {
-    console.log(req.query)
+    // console.log(req.query)
     const dresses = {
+        id: req.query.id,
+        slug: req.query.slug,
+        url: req.query.url,
         kleur: req.query.kleur,
-        type: req.query.type
-    };
+        typeJurk: req.query.typeJurk,
+        gebruikersnaam: req.query.gebruikersnaam,
+        publicatiedatum: req.query.publicatiedatum,
+        beschrijving: req.query.beschrijving
+    }
 
-    const matches = await db.collection("jurken").insertOne({
-        dresses
-    });
+
+    const matches = await db.collection("jurken").insertOne({});
     // const matches = await db.collection("jurken").find({}).toArray();
     res.render("index", {
         titel: "Kies jouw voorkeur",
-        matches
-    //     resultaten: ["kleur: req.query.kleur",
-    //         "type: req.query.type"
-    //     ]
+        matches,
+        dresses
+        //     resultaten: ["kleur: req.query.kleur",
+        //         "type: req.query.type"
+        //     ]
     });
 });
 
@@ -81,26 +90,25 @@ app.post("/homepagina", async (req, res) => {
 
     console.log('hieronder matches')
     // Hoe maak ik het zichtbaar in de browser
+
+
+    const matches = await db.collection("jurken").find({}).toArray();
     const dresses = {
+        id: req.body.id,
+        slug: req.body.slug,
+        url: req.body.url,
         kleur: req.body.kleur,
-        type: req.body.type
-    };
-
-    const matches = await db.collection("jurken").find({
-        dresses
-    }).toArray();
+        typeJurk: req.body.typeJurk,
+        gebruikersnaam: req.body.gebruikersnaam,
+        publicatiedatum: req.body.publicatiedatum,
+        beschrijving: req.body.beschrijving
+    }
     console.log(matches)
-
-
-
     res.render("homepagina", {
         titel: "Jouw voorkeuren",
-        matches
-        // resultaten: ["kleur: req.body.kleur",
-        //     "type: req.body.type"
-        // ]
+        matches,
+        dresses
     });
-
 });
 
 app.post("/voorkeuren/:matchId", (req, res) => {
@@ -123,22 +131,9 @@ app.post("/voorkeuren/:matchId", (req, res) => {
 app.get("/homepagina", async (req, res) => {
     console.log(req.query);
     //EEN SPECIFIEK EIENSCHAP VINDEN
-    const query = {
-        "kleur": "rood"
-    }
-
-    // Sorteren
-    // const options = {
-    //     sort: {
-    //         publicatiedatum: -1
-    //     }
-    // }
 
     //GET LIST OF ALL DRESSES images
-    const matches = await db.collection("jurken").find({
-        query
-    }).toArray();
-
+    const matches = await db.collection("jurken").find({}).toArray();
     res.render("homepagina", {
         titel: "homepagina",
         matches
@@ -158,7 +153,12 @@ app.get("/profiel", (req, res) => {
     });
 });
 
-
+//Route naar de match detailpagina
+app.get("/match/detail", (req, res) => {
+res.render("match-details", {
+  titel: "Detail van de match"
+})
+})
 
 /*****************************************************
  * Connect to database
