@@ -5,7 +5,8 @@ module.exports = {
         "node": true
     },
     "extends": ["eslint:recommended",
- "p5js"],
+        "p5js"
+    ],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
@@ -26,6 +27,16 @@ module.exports = {
         "semi": [
             "error",
             "always"
+        ],
+        "camelcase": [2, {
+            "properties": "always"
+        }],
+
+        "no-multiple-empty-lines": [
+            "error", {
+                "max": 2
+            }
         ]
+
     }
 };

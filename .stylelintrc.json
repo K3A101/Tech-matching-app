@@ -3,6 +3,9 @@
     "unit-allowed-list": [
         
         "px","em", "deg", "%"
-    ]
+    ],
+
+    "declaration-block-no-duplicate-properties": [ true]
   }
+  
 }
