@@ -166,3 +166,21 @@ button[type='submit']:hover {
     background-color: var(--actief-link);
 
 }
+
+/* Responsive maken */
+@media (max-width: 40em) {
+
+    body {
+        width: 80%;
+    }
+fieldset {
+    
+    grid-template-columns: 1fr ;
+   
+}
+
+button[type='submit'] {
+    align-self: flex-start;
+}
+   
+}

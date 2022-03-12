@@ -204,3 +204,15 @@ article li,
 p {
     color: var(--bodytekst-kleur);
 }
+
+
+
+@media (max-width: 40em) {
+
+    main {
+
+       
+        grid-template-columns: 1fr;
+      
+    }
+}

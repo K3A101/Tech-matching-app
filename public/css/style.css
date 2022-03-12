@@ -8,6 +8,7 @@
 /* Algemene stijlen */
 /********************/
 
+/* Kleur pallette voor de applicatie */
 :root {
     --heading-kleur: #605AD5;
     --heading-tekst: 'colendra', 'lato', sans-serif;
@@ -40,10 +41,7 @@ body {
 /* Header met navigatie */
 /************************/
 
-
-
-
-
+/* Is de gebruikersnaam  */
 h1 {
     font-family: var(--heading-tekst);
     color: var(--heading-kleur);
@@ -76,4 +74,12 @@ main {
 .menu:hover,
 a:hover {
     transform: scale(1.3);
+}
+
+footer {
+    margin: 2em 0;
+    padding: 2.5em;
+    text-align: center;
+    border-radius: 1.5em;
+    background-color: var(--achtergrond-kleur-3);
 }
