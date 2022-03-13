@@ -59,7 +59,7 @@ app.get("/", async (req, res) => {
     }
 
 
-    const matches = await db.collection("jurken").insertOne({});
+    const matches = await db.collection("jurken").insertOne(dresses);
     // const matches = await db.collection("jurken").find({}).toArray();
     res.render("index", {
         titel: "Kies jouw voorkeur",
@@ -91,8 +91,6 @@ app.post("/homepagina", async (req, res) => {
     console.log('hieronder matches')
     // Hoe maak ik het zichtbaar in de browser
 
-
-    const matches = await db.collection("jurken").find({}).toArray();
     const dresses = {
         id: req.body.id,
         slug: req.body.slug,
@@ -103,6 +101,8 @@ app.post("/homepagina", async (req, res) => {
         publicatiedatum: req.body.publicatiedatum,
         beschrijving: req.body.beschrijving
     }
+    const matches = await db.collection("jurken").find(dresses).toArray();
+
     console.log(matches)
     res.render("homepagina", {
         titel: "Jouw voorkeuren",
@@ -155,9 +155,9 @@ app.get("/profiel", (req, res) => {
 
 //Route naar de match detailpagina
 app.get("/match/detail", (req, res) => {
-res.render("match-details", {
-  titel: "Detail van de match"
-})
+    res.render("match-details", {
+        titel: "Detail van de match"
+    })
 })
 
 /*****************************************************
