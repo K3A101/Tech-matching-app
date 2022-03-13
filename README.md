@@ -37,8 +37,20 @@ npm run deploy
  Ik heb de npm package nodemon gebruikt om de server makkelijk te herstarten. Het package wordt geinstalleerd 
  `npm install --save-dev nodemon`
 
- 
+ --- 
+ ## Database 
+ Ik geef hier de stuk van de database aan. Hiermee kunt u een structuur van de database namaken. 
 
+ ![Structuur van database](./assets/data-in-database.png)<br>
+
+ Voor meer details kunt u verder lezen in mijn [wiki documentatie]().
+
+
+ ---
+## MIT Licentie
+Voor dit project heb ik gebruikt gemaakt van de MIT licence. 
+
+> Ik heb de license MIT gebruikt. Want het is veel gebruikt, en heeft een kort en krachtige terms and conditions. Verder wordt het gebruikt als een project npm packages bevat. Die ga ik aan de slag tijdens backend.
 
  ---
  ### Bronnen
