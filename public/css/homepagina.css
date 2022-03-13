@@ -40,6 +40,7 @@ header ul {
     background-color: white;
     position: absolute;
     left: -20em;
+    border-radius:1.5em;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1)
 }
 
@@ -76,7 +77,7 @@ header ul {
 /* Filter */
 /**********/
 
-body form {
+body>form {
     padding: 2em;
 }
 
@@ -86,7 +87,7 @@ form label {
 
 }
 
-form input[type ="text"] {
+form input[type="text"] {
     margin-left: 1em;
     padding: 1em;
     width: 50%;
@@ -137,8 +138,10 @@ section {
 
 }
 
-section:hover {
+section:hover,
+section:focus {
     transform: scale(0.9);
+    border: 5px solid var(--heading-tekst);
 }
 
 
@@ -149,6 +152,7 @@ section img[alt="Jurk Afbeelding"] {
 /**************************************/
 /* /* Wat je kan doen met de match    */
 /**************************************/
+/* De iconen */
 
 section figure ul {
     position: absolute;
@@ -183,6 +187,12 @@ section figure ul a img {
     height: 2em;
 }
 
+section form {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: none;
+}
 
 /******************************/
 /* Beschrijving over de match */
@@ -205,14 +215,34 @@ p {
     color: var(--bodytekst-kleur);
 }
 
+/* HTML eyedropper */
+input[type="color"] {
 
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 400px;
+    height: 100px;
+    border: none;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border-radius: 1em;
+    border: none;
+}
 
 @media (max-width: 40em) {
 
     main {
 
-       
+
         grid-template-columns: 1fr;
-      
+
+    }
+
+    form input[type="text"] {
+        display: block;
+        width: 80%;
     }
 }

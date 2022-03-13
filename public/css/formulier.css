@@ -18,6 +18,7 @@ header {
 
 header img {
     width: 2em;
+    cursor: pointer;
 }
 
 header>a:last-of-type {
@@ -30,6 +31,7 @@ header a img {
     transform: scale(1.1);
     border-radius: 50%;
     width: 4em;
+
 }
 
 header ul {
@@ -40,6 +42,7 @@ header ul {
     background-color: white;
     position: absolute;
     left: -20em;
+    border-radius: 1.5em;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1)
 }
 
@@ -173,14 +176,15 @@ button[type='submit']:hover {
     body {
         width: 80%;
     }
-fieldset {
-    
-    grid-template-columns: 1fr ;
-   
-}
 
-button[type='submit'] {
-    align-self: flex-start;
-}
-   
+    fieldset {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    button[type='submit'] {
+        align-self: flex-start;
+    }
+
 }
