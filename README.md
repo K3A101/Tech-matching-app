@@ -43,8 +43,7 @@ npm run deploy
 
  ![Structuur van database](./assets/data-in-database.png)<br>
 
- Voor meer details kunt u verder lezen in mijn [wiki documentatie]().
-
+ Voor meer details kunt u verder lezen in mijn [wiki documentatie](https://github.com/K3A101/Tech-matching-app/wiki).
 
  ---
 ## MIT Licentie
