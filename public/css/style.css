@@ -10,20 +10,23 @@
 
 /* Kleur pallette voor de applicatie */
 :root {
+    /* Headings */
     --heading-kleur: #605AD5;
     --heading-tekst: 'colendra', 'lato', sans-serif;
 
+    /* Achtergrond - kleur */
     --achtergrond-kleur-1: #8FA6E9;
     --achtergrond-kleur-2: #f2f1ff;
     --achtergrond-kleur-3: #FFFFFF;
 
+    /* Links */
     --links-kleur: #462A78;
     --actief-link: #8d52f1;
 
+    /* Tekst */
     --bodytekst-kleur: #414141;
     --bodytekst: 'brandon grotesque', 'lato', sans-serif;
     --links-tekst: #ffffff;
-
 }
 
 
@@ -95,7 +98,6 @@ a:hover {
     align-items: center;
     margin: 10em auto;
     width: 50%;
-
 }
 
 .error-404 img {

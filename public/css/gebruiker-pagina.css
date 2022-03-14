@@ -11,7 +11,6 @@ header {
 header ul {
     display: flex;
     flex-direction: row;
-
     gap: 2em;
     justify-content: space-between;
     margin: 3em 0;
@@ -53,9 +52,7 @@ section:first-of-type {
     display: flex;
     align-items: center;
     gap: 3em;
-
     padding: 1em 0;
-
 }
 
 
@@ -73,7 +70,7 @@ section:first-of-type h1 {
 /*************/
 /* Section 2 */
 /*************/
-
+/* Tabs van de profielpagina */
 section:nth-of-type(2) {
     border-bottom: 0.5em solid var(--achtergrond-kleur-2);
 }
@@ -95,11 +92,10 @@ section:nth-of-type(2) ul .current-tab {
     font-weight: bold;
 }
 
-
 /*************/
 /* Section 3 */
 /*************/
-
+/* Afbeelding van de matches */
 section:nth-of-type(3) figure {
     display: grid;
     gap: 2em;
@@ -115,11 +111,7 @@ section:nth-of-type(3) img {
 
 /* Responsive maken */
 @media (max-width: 40em) {
-
     body {
         width: 80%;
     }
-
-    
-
 }

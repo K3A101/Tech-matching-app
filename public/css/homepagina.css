@@ -50,12 +50,9 @@ header ul {
     animation-duration: 1s;
     animation-timing-function: all ease-in-out;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-
     position: absolute;
     top: 10em;
-
     left: -1em;
-
 }
 
 .menu {
@@ -84,7 +81,6 @@ body>form {
 form label {
     font-size: 2em;
     font-weight: bold;
-
 }
 
 form input[type="text"] {
@@ -99,16 +95,10 @@ section label {
     font-size: 1.5em;
 }
 
-/* section input[value="#e66465"] {
-    padding: 2em;
-} */
-
 /********/
 /* Main */
 /********/
-
 main {
-
     padding: 1em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -134,8 +124,6 @@ section {
         3.4px 2.7px 5.1px rgba(0, 0, 0, 0.025),
         6.3px 5px 9.6px rgba(0, 0, 0, 0.042),
         15px 12px 23px rgba(0, 0, 0, 0.07);
-
-
 }
 
 section:hover,
@@ -144,7 +132,7 @@ section:focus {
     border: 5px solid var(--heading-tekst);
 }
 
-
+/* Afbeelding van de Jurk */
 section img[alt="Jurk Afbeelding"] {
     border-radius: 2em;
 }
@@ -153,7 +141,6 @@ section img[alt="Jurk Afbeelding"] {
 /* /* Wat je kan doen met de match    */
 /**************************************/
 /* De iconen */
-
 section figure ul {
     position: absolute;
     left: 0;
@@ -182,7 +169,6 @@ section figure li {
 }
 
 section figure ul a img {
-
     width: 2em;
     height: 2em;
 }
@@ -199,7 +185,6 @@ section form {
 /******************************/
 article {
     margin: 4em 0;
-
 }
 
 article ul {
@@ -207,7 +192,6 @@ article ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
 }
 
 article li,
@@ -217,11 +201,9 @@ p {
 
 /* HTML eyedropper */
 input[type="color"] {
-
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-
     width: 400px;
     height: 100px;
     border: none;
@@ -233,12 +215,8 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 @media (max-width: 40em) {
-
     main {
-
-
         grid-template-columns: 1fr;
-
     }
 
     form input[type="text"] {
