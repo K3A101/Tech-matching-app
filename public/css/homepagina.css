@@ -40,7 +40,7 @@ header ul {
     background-color: white;
     position: absolute;
     left: -20em;
-    border-radius:1.5em;
+    border-radius: 1.5em;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1)
 }
 

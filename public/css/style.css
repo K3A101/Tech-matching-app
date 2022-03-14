@@ -46,9 +46,21 @@ body {
 
 /* Is de gebruikersnaam  */
 h1 {
+    font-size: 3em;
     font-family: var(--heading-tekst);
     color: var(--heading-kleur);
     text-align: center;
+}
+
+h3 {
+    font-size: 3em;
+    text-align: center;
+    font-family: var(--bodytekst);
+    color: var(--heading-kleur);
+    background-color: var(--achtergrond-kleur-3);
+    padding: 3em;
+    margin: 3em;
+    border-radius: 1.5em;
 }
 
 li {
@@ -67,6 +79,8 @@ a {
 h2 {
     color: var(--heading-kleur);
 }
+
+
 
 main {
     border-radius: 2em;
