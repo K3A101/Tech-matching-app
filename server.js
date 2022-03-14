@@ -15,7 +15,9 @@ const {
 const app = express(); //express kopelen aan applicatie
 const port = process.env.PORT || 8000; //port maken
 const path = require("path");
-const {body} = require("express-validator");
+const {
+    body
+} = require("express-validator");
 let db = null;
 
 console.log(process.env.TESTVAR);
@@ -52,12 +54,13 @@ app.get("/", async (req, res) => {
     }
 
     const matches = await db.collection("jurken").insertOne(dresses);
-   
-     // Render engine
+    const noMatches = (matches.length === 0) ? "Helaas is er geen matches gevonden." : "matches";
+    // Render engine
     res.render("index", {
         titel: "Kies jouw voorkeur",
         matches,
-        dresses
+        dresses,
+        noMatches
     });
 });
 
@@ -72,7 +75,7 @@ app.post("/homepagina", async (req, res) => {
 
     //GET LIST OF ALL DRESSES images
     console.log('hieronder matches')
-   
+
     const dresses = {
         id: req.body.id,
         slug: req.body.slug,
@@ -84,14 +87,15 @@ app.post("/homepagina", async (req, res) => {
         beschrijving: req.body.beschrijving
     }
     const matches = await db.collection("jurken").find(dresses).toArray();
-
+    const noMatches = (matches.length === 0) ? "Helaas is er geen matches gevonden." : "matches";
     console.log(matches)
 
     // Render engine
     res.render("homepagina", {
         titel: "Jouw voorkeuren",
         matches,
-        dresses
+        dresses,
+        noMatches
     });
 });
 
@@ -102,10 +106,8 @@ app.post("/voorkeuren/:matchId", (req, res) => {
     const id = "req.body.id"
     console.log("Get matches from DB")
 
-
     res.render("homepagina", {
         titel: "Jouw voorkeuren",
-
     });
 
 });
@@ -118,9 +120,11 @@ app.get("/homepagina", async (req, res) => {
 
     //GET LIST OF ALL DRESSES images
     const matches = await db.collection("jurken").find({}).toArray();
+     const noMatches = (matches.length === 0) ? "Helaas is er geen matches gevonden." : "Jouw Matches";
     res.render("homepagina", {
         titel: "homepagina",
-        matches
+        matches,
+        noMatches
     });
 });
 
