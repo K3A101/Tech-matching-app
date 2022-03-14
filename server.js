@@ -65,9 +65,7 @@ app.get("/", async (req, res) => {
         titel: "Kies jouw voorkeur",
         matches,
         dresses
-        //     resultaten: ["kleur: req.query.kleur",
-        //         "type: req.query.type"
-        //     ]
+       
     });
 });
 
