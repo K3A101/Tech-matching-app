@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <%- include('./partials/head.ejs')  %>
 <link rel="stylesheet" href="/css/formulier.css">
 
@@ -10,7 +9,6 @@
 
     <main>
         <h1>Welke type jurk wil je tekenen ?</h1>
-
 
         <form action="/homepagina" method="post">
             <fieldset>
@@ -62,7 +60,6 @@
                 </div>
 
                 <div class="options">
-
                     <input type="checkbox" name="kleur" value="zwarteJurk" id="zwart">
                     <label for="zwart"> Zwart</label>
                 </div>
@@ -73,45 +70,36 @@
                 <div class="options">
                     <input type="checkbox" name="typeJurk" value="zomerjurk" id="zomerjurk">
                     <label for="zomerkjurk">Zomerjurk</label>
-
                 </div>
 
 
                 <div class="options">
                     <input type="checkbox" name="typeJurk" value="bruiloft-jurk" id="bruiloftJurk">
                     <label for="bruiloft-jurk">Bruiloft Jurk</label>
-
-
                 </div>
 
                 <div class="options">
                     <input type="checkbox" name="typeJurk" value="avondjurk" id="avondjurk">
                     <label for="avondjurk">Avondjurk</label>
-
-
                 </div>
 
                 <div class="options">
                     <input type="checkbox" name="typeJurk" value="baljurk" id="baljurk">
                     <label for="baljurk">Baljurken</label>
-
-
                 </div>
 
                 <div class="options">
                     <input type="checkbox" name="typeJurk" value="lange-jurk" id="langeJurk">
                     <label for="lange-jurk">Lange Jurken</label>
-
                 </div>
-
             </fieldset>
 
             <button type="submit">Gebruik voorkeur</button>
         </form>
-
     </main>
 
     <%- include('./partials/footer.ejs')  %>
+    
     <script src="./js/script.js"></script>
 </body>
 
