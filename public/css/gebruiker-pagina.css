@@ -71,6 +71,7 @@ section:first-of-type h1 {
 /* Section 2 */
 /*************/
 /* Tabs van de profielpagina */
+
 section:nth-of-type(2) {
     border-bottom: 0.5em solid var(--achtergrond-kleur-2);
 }
