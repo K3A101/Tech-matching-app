@@ -28,7 +28,10 @@ Wanneer de gebruiker een match vindt en opslaat, kunnen  de afbeeldingen aangepa
 #### 1. Clone dit repository 
 `git clone https://github.com/K3A101/Tech-matching-app.git`
 
-#### 2. Server starten 
+#### 2. Npm packages installeren
+Om packages te installeren gebruik je `npm install`
+
+#### 3. Server starten 
 Om de server te starten je de volgende commando gebruiken:
 ```bash
 npm run deploy
