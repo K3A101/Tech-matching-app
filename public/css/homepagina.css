@@ -195,7 +195,7 @@ article ul {
     margin: 2em 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 3em;
 }
 
 article li,

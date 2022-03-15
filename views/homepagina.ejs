@@ -15,16 +15,15 @@
         <label for="filter">Filtreren met kleur</label>
         <input type="text" name="kleur-filter" id="filter" placeholder="Bij welke kleur wil je filtreren..?">
     </form>
-
-    <h3><%= noMatches %> </h3>
+    <h3><%=noMatches  %> </h3>
 
     <main>
-        <% matches.forEach(function(match){ %>
+        <% Array.from(matches).forEach(function(match){ %>
         <!-- Hier is een thumbnail van alle afbeeldingen 1-->
         <section>
             <img src="/images/<%= match.url %>" alt="Jurk Afbeelding">
             <!-- https://unsplash.com/photos/-NyPn9up_7o -->
-            
+
             <figure>
                 <nav>
                     <ul>
@@ -41,6 +40,8 @@
                 <ul>
                     <li> <%=match.gebruikersnaam %> </li>
                     <li><%= match.publicatiedatum %> </li>
+                    <li><%= match.kleur%></li>
+                    <li><%= match.kleur%></li>
                 </ul>
                 <h2>Beschrijving</h2>
                 <p><%= match.beschrijving %> </p>

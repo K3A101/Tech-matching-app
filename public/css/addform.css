@@ -1,0 +1,138 @@
+body {
+    margin: 0 auto;
+    width: 50%;
+}
+
+
+/* Header  */
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em;
+}
+
+header img {
+    width: 2em;
+}
+
+header>a:last-of-type {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Gebruikersprofiel */
+header a img {
+    transform: scale(1.1);
+    border-radius: 50%;
+    width: 4em;
+}
+
+header ul {
+    z-index: 1;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    left: -20em;
+    border-radius: 1.5em;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
+.toon-menu {
+    padding: 2em;
+    animation-name: side-menu;
+    animation-duration: 1s;
+    animation-timing-function: all ease-in-out;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    position: absolute;
+    top: 10em;
+    left: -1em;
+}
+
+.menu {
+    transition: 0.5s;
+}
+
+@keyframes side-menu {
+    from {
+        transform: translateX(-9em);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*************/
+/* Formulier */
+/*************/
+
+main {
+    background-color: var(--achtergrond-kleur-3);
+    padding: 2em;
+    /* box shadow */
+    /* Bron:  https://shadows.brumm.af/*/
+    box-shadow: 0.4px 0.3px 0.6px rgba(0, 0, 0, -0.002),
+        1px 0.8px 1.5px rgba(0, 0, 0, 0.004),
+        1.9px 1.5px 2.9px rgba(0, 0, 0, 0.013),
+        3.4px 2.7px 5.1px rgba(0, 0, 0, 0.025),
+        6.3px 5px 9.6px rgba(0, 0, 0, 0.042),
+        15px 12px 23px rgba(0, 0, 0, 0.07);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+
+}
+
+legend {
+    color: var(--heading-kleur);
+    font-weight: bold;
+    font-size: 2em;
+
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin: 2em 0;
+}
+
+label {
+    font-size: 1.5em;
+}
+
+input {
+    padding: 1.5em;
+    border-radius: 3em;
+    border: 2px solid var(--achtergrond-kleur-1);
+}
+
+textarea {
+    appearance: none;
+    font-size: 1.5em;
+    padding: 1.5em;
+    border: 2px solid var(--achtergrond-kleur-1);
+    border-radius: 2em;
+    font-family: var(--bodytekst);
+}
+
+button[type='submit'] {
+    cursor: pointer;
+    align-self: flex-end;
+    padding: 1.5em;
+    border-radius: 1.5em;
+    background-color: var(--heading-kleur);
+    color: white;
+    font-weight: bold;
+    border: none;
+    transition: ease-in-out 0.2s;
+}

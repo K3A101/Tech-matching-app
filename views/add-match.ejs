@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs')  %>
+<link rel="stylesheet" href="/css/addform.css">
+
+<body>
+
+    <%- include('./partials/header.ejs')  %>
+
+
+
+    <main>
+        <form action="/homepagina" method="post">
+            <fieldset>
+                <legend>Voeg een Jurk:</legend>
+                <label for="foto">Voeg een foto</label>
+                <input type="file" name="url" value="jurk" id="foto">
+            </fieldset>
+
+            <fieldset>
+                <legend>Gebruiker gegevens</legend>
+                <label for="naam">Naam</label>
+                <input type="text" name="gebruikersnaam"  placeholder="Je gebruiker's naam">
+            </fieldset>
+
+            <fieldset>
+                <legend>Publicatiedatum</legend>
+                <label for="datum">Publicatiedatum</label>
+                <input type="date" name="publicatiedatum" id="datum">
+            </fieldset>
+
+            <fieldset>
+                <legend>Beschrijf het Jurk</legend>
+                <label for="beschrijving"></label>
+                <textarea placeholder="Schrijf over het jurk" name="beschrijving" id="beschrijving" cols="40" rows="10"></textarea>
+            </fieldset>
+
+            <button type="submit">Voeg match toe</button>
+        </form>
+    </main>
+
+
+    <%- include('./partials/footer.ejs')  %>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
