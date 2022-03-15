@@ -180,6 +180,10 @@ section form {
     padding: none;
 }
 
+section form label {
+    color: var(--heading-kleur);
+}
+
 /******************************/
 /* Beschrijving over de match */
 /******************************/
@@ -212,6 +216,19 @@ input[type="color"] {
 input[type="color"]::-webkit-color-swatch {
     border-radius: 1em;
     border: none;
+}
+
+#eyedropperButton {
+    font-family: var(--bodytekst);
+
+    font-weight: bold;
+    align-items: center;
+    padding: 1.5em;
+    border: none;
+    background-color: var(--achtergrond-kleur-1);
+    margin: 1em 2em;
+    border-radius: 2em;
+    color: rgb(30, 13, 41);
 }
 
 @media (max-width: 40em) {

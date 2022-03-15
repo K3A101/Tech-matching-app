@@ -55,7 +55,7 @@ h1 {
 h3 {
     font-size: 3em;
     text-align: center;
-    font-family: var(--bodytekst);
+    font-family: var(--heading-tekst);
     color: var(--heading-kleur);
     background-color: var(--achtergrond-kleur-3);
     padding: 3em;
