@@ -93,7 +93,7 @@ app.post("/homepagina", async (req, res) => {
         beschrijving: req.body.beschrijving
     }
 
-    const matches = await db.collection("jurken").insertOne(dresses);
+const matches = await db.collection("jurken").insertOne(dresses);
     const noMatches = (matches.length === 0) ? "Helaas is er geen matches gevonden." : "matches";
     console.log(matches)
 
@@ -133,7 +133,7 @@ app.get("/match/filter", async (req, res) => {
 
 // Route voor de form Action: "/homepagina"
 // Dit is de als je method post gebruikt
-app.post("/homepagina", async (req, res) => {
+app.post("/match/filter", async (req, res) => {
     console.log(req.body);
     console.log('hieronder is de object keys loop')
     Object.keys(req.body).forEach(key => {
@@ -159,7 +159,7 @@ app.post("/homepagina", async (req, res) => {
 
     // Render engine
      matches.push(match);
-    res.render("homepagina", {
+    res.render("filter-resultaten", {
         titel: "Jouw voorkeuren",
         matches,
         dresses,

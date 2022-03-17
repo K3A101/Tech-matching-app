@@ -31,7 +31,7 @@ Wanneer de gebruiker een match vindt en opslaat, kunnen  de afbeeldingen aangepa
 #### 2. Npm packages installeren
 Om packages te installeren gebruik je `npm install`
 
-#### 3. Server starten 
+#### 3. Server starten ................................
 Om de server te starten je de volgende commando gebruiken:
 ```bash
 npm run deploy
