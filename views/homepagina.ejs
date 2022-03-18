@@ -5,6 +5,8 @@
 <!-- de layout van de head tag zit in de partails map als head.ejs -->
 <%- include('./partials/head.ejs')  %>
 
+<!-- Matches overzichtpagina -->
+
 <body>
     <!-- Partials codes -->
     <!-- importeer de code door function include te gebruiken -->
@@ -41,7 +43,7 @@
                     <li> <%=match.gebruikersnaam %> </li>
                     <li><%= match.publicatiedatum %> </li>
                     <li><%= match.kleur%></li>
-                    <li><%= match.kleur%></li>
+                    <li><%= match.typeJurk%></li>
                 </ul>
                 <h2>Beschrijving</h2>
                 <p><%= match.beschrijving %> </p>
@@ -50,7 +52,7 @@
             <form action="/homepagina">
                 <label for="pallete">Klik op de kleur</label>
                 <input type="color" value="#462A78">
-                <button id="eyedropperButton">Open eyedropper</button>
+
             </form>
 
         </section>
