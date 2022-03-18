@@ -1,3 +1,5 @@
+/* Dit is stylesheets matches overzichtpagina  */
+
 body {
     margin: 2em auto;
     width: 100%;
@@ -18,6 +20,7 @@ header {
 
 header img {
     width: 2em;
+    cursor: pointer;
 }
 
 header>a:last-of-type {
@@ -185,7 +188,7 @@ section form label {
 }
 
 /******************************/
-/* Beschrijving over de match */
+/*Metadata van de match */
 /******************************/
 article {
     margin: 4em 0;
@@ -194,11 +197,18 @@ article {
 article ul {
     margin: 2em 0;
     display: flex;
+    justify-content: center;
     flex-direction: row;
     gap: 3em;
+    border-bottom: 0.5em solid var(--achtergrond-kleur-2);
 }
 
-article li,
+article li {
+    font-size: 1.2em;
+    color: var(--links-kleur);
+}
+
+
 p {
     color: var(--bodytekst-kleur);
 }
@@ -218,18 +228,7 @@ input[type="color"]::-webkit-color-swatch {
     border: none;
 }
 
-#eyedropperButton {
-    font-family: var(--bodytekst);
 
-    font-weight: bold;
-    align-items: center;
-    padding: 1.5em;
-    border: none;
-    background-color: var(--achtergrond-kleur-1);
-    margin: 1em 2em;
-    border-radius: 2em;
-    color: rgb(30, 13, 41);
-}
 
 @media (max-width: 40em) {
     main {

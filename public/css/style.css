@@ -1,3 +1,4 @@
+/* Algemene stylesheet */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -87,6 +88,9 @@ main {
     padding: 1em;
     /* background-color: white; */
 }
+
+
+
 
 .menu:hover,
 a:hover {
