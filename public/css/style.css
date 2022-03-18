@@ -8,7 +8,6 @@
 /********************/
 /* Algemene stijlen */
 /********************/
-
 /* Kleur pallette voor de applicatie */
 :root {
     /* Headings */
@@ -29,7 +28,6 @@
     --bodytekst: 'brandon grotesque', 'lato', sans-serif;
     --links-tekst: #ffffff;
 }
-
 
 body {
     margin: 2em auto;
@@ -131,12 +129,10 @@ a:hover {
     background-color: var(--achtergrond-kleur-3);
     font-family: var(--heading-tekst);
     font-weight: bold;
-
     padding: 1em;
     border-radius: 1.5em;
     color: var(--heading-kleur);
 }
-
 
 footer {
     margin: 2em 0;

@@ -8,7 +8,6 @@ body {
 /***********************/
 /* Header en navigatie */
 /***********************/
-
 header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -33,7 +32,6 @@ header a img {
     transform: scale(1.1);
     border-radius: 50%;
     width: 4em;
-
 }
 
 header ul {
@@ -57,7 +55,6 @@ header ul {
     position: absolute;
     top: 10em;
     left: -1em;
-
 }
 
 .menu {
@@ -78,7 +75,6 @@ header ul {
 /*****************/
 /* Het formulier */
 /*****************/
-
 main {
     background-color: var(--achtergrond-kleur-3);
     padding: 2em;
@@ -90,8 +86,6 @@ main {
         3.4px 2.7px 5.1px rgba(0, 0, 0, 0.025),
         6.3px 5px 9.6px rgba(0, 0, 0, 0.042),
         15px 12px 23px rgba(0, 0, 0, 0.07);
-
-
 }
 
 form {
@@ -103,7 +97,6 @@ legend {
     color: var(--heading-kleur);
     font-weight: bold;
     font-size: 2em;
-
 }
 
 label {
