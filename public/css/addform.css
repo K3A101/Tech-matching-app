@@ -4,7 +4,10 @@ body {
 }
 
 
-/* Header  */
+/*****************/
+/*    Header     */
+/*****************/
+
 header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -14,10 +17,12 @@ header {
     margin: 1em;
 }
 
+/* Hamburger menu */
 header img {
     width: 2em;
+    cursor: pointer;
 }
-
+/* Gberuikersprofiel */
 header>a:last-of-type {
     display: flex;
     justify-content: flex-end;
@@ -30,6 +35,7 @@ header a img {
     width: 4em;
 }
 
+/* Navigatie menu */
 header ul {
     z-index: 1;
     font-size: 2em;
