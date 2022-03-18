@@ -14,25 +14,11 @@ function zichtbaarMaken() {
 
 hamburgerMenu.addEventListener("click", zichtbaarMaken);
 
-//maakt eyedropper object
 
-const button = document.querySelector('#eyedropperButton');
-if ('EyeDropper' in window) {
-    const eyeDropper = new EyeDropper();
 
-    button.addEventListener('click', () => {
-        eyeDropper
-            .open()
-            .then(colorSelectionResult => {
-                document.body.style.backgroundColor = colorSelectionResult.sRGBHex;
-            })
-            .catch(() => {
-                // The user canceled selection
-            });
-    });
-} else {
-    // The EyeDropper API isn't supported
-}
+
+
+
 
 // Eyedropper Api
 // Bron: https://akhromieiev.com/how-to-use-eyedropper-api/

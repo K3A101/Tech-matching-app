@@ -10,57 +10,59 @@
     <main>
         <h1>Welke type jurk wil je tekenen ?</h1>
 
-        <form action="/match/filter" method="post">
+        <form action="/match/filter" method="post" novalidate>
             <fieldset>
                 <label for="interesse">Inspiratie naam</label>
-                <input type="text" name="nieuweInteresse" id="interesse">
+                <span class="hide"></span>
+                <input type="text" name="nieuweInteresse" id="interesse" required minlength="5" maxlength="30">
+                <span class="error" aria-live="polite"></span>
             </fieldset>
 
             <fieldset>
                 <legend>Jurk Kleur</legend>
                 <!-- Moet de name variabele anders zijn? -->
                 <div class="options">
-                    <input type="checkbox" name="kleur" value="rodejurk" id="rood">
+                    <input type="checkbox" name="kleur" value="rood" id="rood">
                     <label for="rood"> Rood</label>
                 </div>
 
                 <div class="options">
-                    <input type="checkbox" name="kleur" value="blauweJurk" id="blauw">
+                    <input type="checkbox" name="kleur" value="blauw" id="blauw">
                     <label for="blauw"> Blauw</label>
                 </div>
 
                 <div class="options">
-                    <input type="checkbox" name="kleur" value="paarseJurk" id="paars">
+                    <input type="checkbox" name="kleur" value="paars" id="paars">
                     <label for="paars"> Paars</label>
                 </div>
 
                 <div class="options">
-                    <input type="checkbox" name="kleur" value="geleJurk" id="geel">
+                    <input type="checkbox" name="kleur" value="geel" id="geel">
                     <label for="geel"> Geel</label>
                 </div>
 
                 <div class="options">
-                    <input type="checkbox" name="kleur" value="witteJurk" id="wit">
+                    <input type="checkbox" name="kleur" value="wit" id="wit">
                     <label for="wit"> Wit</label>
                 </div>
 
                 <div class="options">
-                    <input type="checkbox" name="kleur" value="groeneJurk" id="groen">
+                    <input type="checkbox" name="kleur" value="groen" id="groen">
                     <label for="groen"> Groen</label>
                 </div>
 
                 <div class="options">
-                    <input type="checkbox" name="kleur" value="donkergroeneJurk" id="donkergroen">
+                    <input type="checkbox" name="kleur" value="donkergroen" id="donkergroen">
                     <label for="donkergroen"> Donkergroen</label>
                 </div>
 
                 <div class="options">
-                    <input type="checkbox" name="kleur" value="rozeJurk" id="roze">
+                    <input type="checkbox" name="kleur" value="roze" id="roze">
                     <label for="roze"> Roze</label>
                 </div>
 
                 <div class="options">
-                    <input type="checkbox" name="kleur" value="zwarteJurk" id="zwart">
+                    <input type="checkbox" name="kleur" value="zwart" id="zwart">
                     <label for="zwart"> Zwart</label>
                 </div>
             </fieldset>
@@ -99,8 +101,9 @@
     </main>
 
     <%- include('./partials/footer.ejs')  %>
-    
-    <script src="../js/script.js"></script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/form-validatie.js"></script>
 </body>
 
 </html>
