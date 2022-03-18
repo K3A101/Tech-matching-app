@@ -1,3 +1,5 @@
+/* Stylesheet voor de formulieren  zoals de filter en de match toevoegen  */
+
 body {
     margin: 0 auto;
     width: 50%;
@@ -107,6 +109,7 @@ legend {
 label {
     font-size: 1.5em;
 }
+
 /*  Interesse naam */
 input[type='text'] {
     padding: 0.8em;
@@ -119,6 +122,7 @@ input[type='text']:active,
 input[type='text']:focus {
     background-color: #dcdfff;
 }
+
 /* Checkboxes */
 input[type='checkbox'] {
     margin-right: 1em;
@@ -147,6 +151,7 @@ fieldset {
     align-items: center;
     flex-direction: row;
 }
+
 /* Voorkeur kiezen knop */
 button[type='submit'] {
     cursor: pointer;
@@ -162,6 +167,40 @@ button[type='submit'] {
 
 button[type='submit']:hover {
     background-color: var(--actief-link);
+}
+
+/***********************/
+/* Formulier validatie */
+/***********************/
+input:valid {
+    border: 2px solid var(--achtergrond-kleur-1);
+    box-shadow: 0 0 9px 1px var(--achtergrond-kleur-1);
+}
+
+input:invalid,
+input:invalid:required {
+    border: 2px solid #eb3434;
+    box-shadow: 0 0 9px 1px #eb3434;
+}
+
+/* Foutmelding wanneer onjuiste dat wordt ingevoerd in het formulier */
+.error {
+    width: 100%;
+    padding: 0;
+    font-size: 1.5em;
+    color: var(--heading-kleur);
+
+    border-radius: 0 0 5px 5px;
+
+    box-sizing: border-box;
+}
+
+.error.active {
+    padding: 0.3em;
+}
+
+.hide {
+    display: none;
 }
 
 /* Responsive maken */
