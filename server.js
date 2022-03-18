@@ -44,8 +44,69 @@ app.set("view engine", "ejs");
 
 // TEMPLATE ENGINE
 
-//Formulier pagina om matches toe te voegen 
+//Formulier pagina om voorkeuren voor jurken te invullen
 app.get("/", async (req, res) => {
+    const dresses = {
+        id: req.query.id,
+        slug: req.query.slug,
+        url: req.query.url,
+        kleur: req.query.kleur,
+        typeJurk: req.query.typeJurk,
+        gebruikersnaam: req.query.gebruikersnaam,
+        publicatiedatum: req.query.publicatiedatum,
+        beschrijving: req.query.beschrijving
+    }
+
+    const matches = await db.collection("jurken").find({});
+    const noMatches = (matches.length === 0) ? "Helaas is er geen matches gevonden." : "matches";
+    // Render engine
+    res.render("index", {
+        titel: "Kies jouw voorkeur",
+        matches,
+        dresses,
+        noMatches
+    });
+});
+
+// Route voor de form Action: "/homepagina"
+// Dit is de als je method post gebruikt
+app.post("/match/filter", async (req, res) => {
+    console.log(req.body);
+    console.log('hieronder is de object keys loop')
+    Object.keys(req.body).forEach(key => {
+        console.log(key)
+    })
+
+    //Krijg gefiltered matches 
+    console.log('hieronder matches')
+
+    const dresses = {
+        "id": req.body.id,
+        "slug": req.body.slug,
+        "url": req.body.url,
+        "kleur": req.body.kleur,
+        "typeJurk": req.body.typeJurk,
+        "gebruikersnaam": req.body.gebruikersnaam,
+        "publicatiedatum": req.body.publicatiedatum,
+        "beschrijving": req.body.beschrijving
+    }
+    const matches = await db.collection("jurken").find(dresses).toArray();
+    const noMatches = (matches.length === 0) ? "Helaas is er geen matches gevonden." : "matches";
+    console.log(matches)
+
+    // Render engine
+     matches.push(match);
+    res.render("filter-resultaten", {
+        titel: "Jouw voorkeuren",
+        matches,
+        dresses,
+        noMatches
+    });
+   
+});
+
+//Formulier pagina om matches toe te voegen 
+app.get("/match/add", async (req, res) => {
     const dresses = {
         id: req.query.id,
         slug: req.query.slug,
@@ -105,67 +166,6 @@ const matches = await db.collection("jurken").insertOne(dresses);
         dresses,
         noMatches
     });
-});
-
-//Formulier pagina om voorkeuren voor jurken te invullen
-app.get("/match/filter", async (req, res) => {
-    const dresses = {
-        id: req.query.id,
-        slug: req.query.slug,
-        url: req.query.url,
-        kleur: req.query.kleur,
-        typeJurk: req.query.typeJurk,
-        gebruikersnaam: req.query.gebruikersnaam,
-        publicatiedatum: req.query.publicatiedatum,
-        beschrijving: req.query.beschrijving
-    }
-
-    const matches = await db.collection("jurken").find({});
-    const noMatches = (matches.length === 0) ? "Helaas is er geen matches gevonden." : "matches";
-    // Render engine
-    res.render("index", {
-        titel: "Kies jouw voorkeur",
-        matches,
-        dresses,
-        noMatches
-    });
-});
-
-// Route voor de form Action: "/homepagina"
-// Dit is de als je method post gebruikt
-app.post("/match/filter", async (req, res) => {
-    console.log(req.body);
-    console.log('hieronder is de object keys loop')
-    Object.keys(req.body).forEach(key => {
-        console.log(key)
-    })
-
-    //Krijg gefiltered matches 
-    console.log('hieronder matches')
-
-    const dresses = {
-        "id": req.body.id,
-        "slug": req.body.slug,
-        "url": req.body.url,
-        "kleur": req.body.kleur,
-        "typeJurk": req.body.typeJurk,
-        "gebruikersnaam": req.body.gebruikersnaam,
-        "publicatiedatum": req.body.publicatiedatum,
-        "beschrijving": req.body.beschrijving
-    }
-    const matches = await db.collection("jurken").find(dresses).toArray();
-    const noMatches = (matches.length === 0) ? "Helaas is er geen matches gevonden." : "matches";
-    console.log(matches)
-
-    // Render engine
-     matches.push(match);
-    res.render("filter-resultaten", {
-        titel: "Jouw voorkeuren",
-        matches,
-        dresses,
-        noMatches
-    });
-   
 });
 
 // Matches toevoegen formulier pagina
