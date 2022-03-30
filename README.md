@@ -40,6 +40,10 @@ npm run deploy
  Ik heb de npm package nodemon gebruikt om de server makkelijk te herstarten. Het package wordt geinstalleerd 
  `npm install --save-dev nodemon`
 
+--
+## Live demo van de applicatie
+
+[https://jurk-matching-app.herokuapp.com/](https://jurk-matching-app.herokuapp.com/)
  --- 
  ## Database 
  Ik geef hier de stuk van de database aan. Hiermee kunt u een structuur van de database namaken. 
